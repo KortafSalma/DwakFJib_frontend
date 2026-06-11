@@ -1,0 +1,340 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/pages/distributor/DistributorNotifications.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/pages/distributor</a> DistributorNotifications.jsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/30</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/11</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/12</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/20</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useState } from 'react';
+import { Truck, Package, Info as InfoIcon, AlertTriangle, Eye, Inbox, BarChart3 } from 'lucide-react';
+import NotificationLayout from '../../components/notifications/NotificationLayout';
+&nbsp;
+const initialData = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 1, type: 'delivery', title: 'New Delivery Assignment', message: 'SHP-005 assigned to your route - 15 items', time: '5 min ago', read: false },
+  { id: 2, type: 'stock', title: 'Inventory Update', message: 'Central warehouse received 500 units Metformin', time: '20 min ago', read: false },
+  { id: 3, type: 'system', title: 'Route Optimized', message: 'Delivery route optimized - ETA reduced by 12%', time: '1 hour ago', read: false },
+  { id: 4, type: 'delivery', title: 'Delivery Completed', message: 'SHP-002 delivered to GreenCross Pharmacy', time: '3 hours ago', read: true },
+  { id: 5, type: 'alert', title: 'Delay Warning', message: 'Traffic reported on I-95 near distribution center', time: '4 hours ago', read: true },
+  { id: 6, type: 'stock', title: 'Restock Request', message: 'HealthPlus Pharmacy requesting 200 units Amoxicillin', time: '6 hours ago', read: true },
+  { id: 7, type: 'system', title: 'Fleet Update', message: 'Vehicle VH-003 maintenance completed', time: '10 hours ago', read: true },
+  { id: 8, type: 'delivery', title: 'Proof of Delivery', message: 'SHP-001 signed by MediCare Center staff', time: '1 day ago', read: true },
+];
+&nbsp;
+const typeConfig = <span class="cstat-no" title="statement not covered" >{</span>
+  delivery: { icon: Truck, color: 'text-blue-600', bg: 'bg-blue-50', ring: 'ring-blue-500/20', label: 'Delivery' },
+  stock: { icon: Package, color: 'text-amber-600', bg: 'bg-amber-50', ring: 'ring-amber-500/20', label: 'Inventory' },
+  system: { icon: InfoIcon, color: 'text-slate-600', bg: 'bg-slate-50', ring: 'ring-slate-500/20', label: 'System' },
+  alert: { icon: AlertTriangle, color: 'text-red-600', bg: 'bg-red-50', ring: 'ring-red-500/20', label: 'Alert' },
+};
+&nbsp;
+const filterTabs = <span class="cstat-no" title="statement not covered" >[</span>
+  { key: 'all', label: 'All' },
+  { key: 'delivery', label: 'Deliveries' },
+  { key: 'stock', label: 'Inventory' },
+  { key: 'alert', label: 'Alerts' },
+  { key: 'system', label: 'System' },
+];
+&nbsp;
+const distributorSettingsItems = <span class="cstat-no" title="statement not covered" >[</span>
+  { label: 'Deliveries', desc: 'New delivery assignments and status updates', key: 'delivery', icon: Truck, color: 'text-blue-500', bg: 'bg-blue-50' },
+  { label: 'Inventory', desc: 'Stock updates and restock requests', key: 'stock', icon: Package, color: 'text-amber-500', bg: 'bg-amber-50' },
+  { label: 'Alerts', desc: 'Important warnings and delays', key: 'alert', icon: AlertTriangle, color: 'text-red-500', bg: 'bg-red-50' },
+  { label: 'System', desc: 'System updates and fleet management', key: 'system', icon: InfoIcon, color: 'text-slate-500', bg: 'bg-slate-50' },
+];
+&nbsp;
+const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >DistributorNotifications = () =&gt; {</span></span>
+  const [notifications, <span class="cstat-no" title="statement not covered" >setNotifications] = useState(initialData);</span>
+  const [activeFilter, <span class="cstat-no" title="statement not covered" >setActiveFilter] = useState('all');</span>
+  const [searchQuery, <span class="cstat-no" title="statement not covered" >setSearchQuery] = useState('');</span>
+&nbsp;
+  const unreadCount = <span class="cstat-no" title="statement not covered" >notifications.<span class="fstat-no" title="function not covered" >filter((n</span>) =&gt; <span class="cstat-no" title="statement not covered" >!n.read)</span>.length;</span>
+&nbsp;
+  const filtered = <span class="cstat-no" title="statement not covered" >notifications.<span class="fstat-no" title="function not covered" >filter((n</span>) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (activeFilter !== 'all' &amp;&amp; n.type !== activeFilter) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered" >    if (searchQuery &amp;&amp; !n.title?.toLowerCase().includes(searchQuery.toLowerCase()) &amp;&amp; !n.message?.toLowerCase().includes(searchQuery.toLowerCase())) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+  });
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >markAllRead = () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >s</span>etNotifications((p</span>rev) =&gt; <span class="cstat-no" title="statement not covered" >prev.<span class="fstat-no" title="function not covered" >map((n</span>) =&gt; (<span class="cstat-no" title="statement not covered" >{ ...n, read: true }))</span>)</span>;</span></span>
+  const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >dismissNotification = (i</span>d) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >setNotifications((p</span>rev) =&gt; <span class="cstat-no" title="statement not covered" >prev.<span class="fstat-no" title="function not covered" >filter((n</span>) =&gt; <span class="cstat-no" title="statement not covered" >n.id !== id)</span>)</span>;</span></span>
+&nbsp;
+  const mapped = <span class="cstat-no" title="statement not covered" >filtered.<span class="fstat-no" title="function not covered" >map((n</span>) =&gt; (<span class="cstat-no" title="statement not covered" >{</span></span>
+    id: n.id, type: n.type, title: n.title, description: n.message, time: n.time, isUnread: !n.read,
+  }));
+&nbsp;
+  const statsCards = <span class="cstat-no" title="statement not covered" >[</span>
+    { label: 'Total', value: notifications.length, icon: Inbox, color: 'text-[#14B8A6]', bg: 'bg-[#14B8A6]/10' },
+    { label: 'Unread', value: unreadCount, icon: Eye, color: 'text-amber-600', bg: 'bg-amber-50' },
+    { label: 'Active', value: notifications.<span class="fstat-no" title="function not covered" >filter((n</span>) =&gt; <span class="cstat-no" title="statement not covered" >n.type === 'delivery' &amp;&amp; !n.read)</span>.length, icon: Truck, color: 'text-blue-600', bg: 'bg-blue-50' },
+    { label: 'Alerts', value: notifications.<span class="fstat-no" title="function not covered" >filter((n</span>) =&gt; <span class="cstat-no" title="statement not covered" >n.type === 'alert')</span>.length, icon: BarChart3, color: 'text-red-600', bg: 'bg-red-50' },
+  ];
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;NotificationLayout
+      title="Notifications"
+      subtitle="Delivery updates and alerts"
+      statsCards={statsCards}
+      filterTabs={filterTabs}
+      activeFilter={activeFilter}
+      onFilterChange={setActiveFilter}
+      searchQuery={searchQuery}
+      onSearchChange={setSearchQuery}
+      unreadCount={unreadCount}
+      onMarkAllRead={markAllRead}
+      typeConfig={typeConfig}
+      notifications={mapped}
+      onDismiss={dismissNotification}
+      settingsItems={distributorSettingsItems}
+    /&gt;
+  );
+};
+&nbsp;
+export default DistributorNotifications;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-06-09T14:48:31.203Z
+            </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
+</html>
+    

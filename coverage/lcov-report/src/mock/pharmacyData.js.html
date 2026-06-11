@@ -1,0 +1,259 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/mock/pharmacyData.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/mock</a> pharmacyData.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/5</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/5</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const mockMedications = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 1, name: 'Amoxicillin 500mg', category: 'Antibiotics', dosage: '500mg', stock: 245, status: 'IN_STOCK', price: 12.99, expiryDate: '2027-03-15', reservations: 8, supplier: 'PharmaCorp' },
+  { id: 2, name: 'Metformin 850mg', category: 'Diabetes', dosage: '850mg', stock: 189, status: 'IN_STOCK', price: 8.50, expiryDate: '2026-11-20', reservations: 12, supplier: 'MediSupply' },
+  { id: 3, name: 'Lisinopril 10mg', category: 'Cardiology', dosage: '10mg', stock: 15, status: 'LOW_STOCK', price: 15.75, expiryDate: '2026-08-10', reservations: 5, supplier: 'CardioMed' },
+  { id: 4, name: 'Omeprazole 20mg', category: 'Gastro', dosage: '20mg', stock: 0, status: 'OUT_OF_STOCK', price: 9.99, expiryDate: '2026-12-01', reservations: 0, supplier: 'GastroPharm' },
+  { id: 5, name: 'Atorvastatin 20mg', category: 'Cardiology', dosage: '20mg', stock: 156, status: 'IN_STOCK', price: 22.50, expiryDate: '2027-06-30', reservations: 3, supplier: 'CardioMed' },
+  { id: 6, name: 'Ibuprofen 400mg', category: 'Pain Relief', dosage: '400mg', stock: 320, status: 'IN_STOCK', price: 5.99, expiryDate: '2028-01-15', reservations: 15, supplier: 'PainReliefCo' },
+  { id: 7, name: 'Ciprofloxacin 500mg', category: 'Antibiotics', dosage: '500mg', stock: 8, status: 'LOW_STOCK', price: 18.25, expiryDate: '2026-07-22', reservations: 2, supplier: 'PharmaCorp' },
+  { id: 8, name: 'Amlodipine 5mg', category: 'Cardiology', dosage: '5mg', stock: 0, status: 'OUT_OF_STOCK', price: 11.00, expiryDate: '2026-09-14', reservations: 0, supplier: 'CardioMed' },
+  { id: 9, name: 'Losartan 50mg', category: 'Cardiology', dosage: '50mg', stock: 78, status: 'IN_STOCK', price: 14.50, expiryDate: '2027-02-28', reservations: 6, supplier: 'CardioMed' },
+  { id: 10, name: 'Prednisone 10mg', category: 'Anti-inflammatory', dosage: '10mg', stock: 45, status: 'IN_STOCK', price: 7.80, expiryDate: '2026-06-30', reservations: 4, supplier: 'InflammaCure' },
+  { id: 11, name: 'Levothyroxine 50mcg', category: 'Endocrinology', dosage: '50mcg', stock: 12, status: 'LOW_STOCK', price: 19.99, expiryDate: '2027-04-10', reservations: 7, supplier: 'ThyroMed' },
+  { id: 12, name: 'Warfarin 5mg', category: 'Cardiology', dosage: '5mg', stock: 0, status: 'EXPIRED', price: 6.50, expiryDate: '2025-12-01', reservations: 0, supplier: 'CardioMed' },
+  { id: 13, name: 'Gabapentin 300mg', category: 'Neurology', dosage: '300mg', stock: 95, status: 'IN_STOCK', price: 16.75, expiryDate: '2027-08-15', reservations: 9, supplier: 'NeuroPharm' },
+  { id: 14, name: 'Hydrochlorothiazide 25mg', category: 'Cardiology', dosage: '25mg', stock: 5, status: 'LOW_STOCK', price: 4.99, expiryDate: '2026-10-05', reservations: 1, supplier: 'CardioMed' },
+  { id: 15, name: 'Sertraline 50mg', category: 'Psychiatry', dosage: '50mg', stock: 167, status: 'IN_STOCK', price: 13.25, expiryDate: '2027-11-30', reservations: 11, supplier: 'MindCare' },
+];
+&nbsp;
+export const mockReservations = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 'R-001', medication: 'Amoxicillin 500mg', user: 'Sarah Johnson', date: '2026-05-20', quantity: 30, deposit: 15.00, status: 'PENDING' },
+  { id: 'R-002', medication: 'Metformin 850mg', user: 'Mike Chen', date: '2026-05-19', quantity: 60, deposit: 25.50, status: 'PENDING' },
+  { id: 'R-003', medication: 'Ibuprofen 400mg', user: 'Emily Davis', date: '2026-05-18', quantity: 20, deposit: 5.99, status: 'PAID' },
+  { id: 'R-004', medication: 'Atorvastatin 20mg', user: 'Robert Wilson', date: '2026-05-17', quantity: 30, deposit: 22.50, status: 'COMPLETED' },
+  { id: 'R-005', medication: 'Lisinopril 10mg', user: 'Lisa Brown', date: '2026-05-16', quantity: 30, deposit: 15.75, status: 'CANCELLED' },
+  { id: 'R-006', medication: 'Gabapentin 300mg', user: 'David Lee', date: '2026-05-21', quantity: 90, deposit: 50.25, status: 'PENDING' },
+];
+&nbsp;
+export const mockOrders = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 'ORD-001', supplier: 'PharmaCorp', items: 5, total: 1250.00, status: 'DELIVERED', date: '2026-05-18' },
+  { id: 'ORD-002', supplier: 'MediSupply', items: 3, total: 890.50, status: 'SHIPPED', date: '2026-05-19' },
+  { id: 'ORD-003', supplier: 'CardioMed', items: 8, total: 2100.75, status: 'PROCESSING', date: '2026-05-20' },
+  { id: 'ORD-004', supplier: 'PainReliefCo', items: 2, total: 450.00, status: 'PENDING', date: '2026-05-20' },
+  { id: 'ORD-005', supplier: 'NeuroPharm', items: 4, total: 1680.00, status: 'SHIPPED', date: '2026-05-17' },
+  { id: 'ORD-006', supplier: 'ThyroMed', items: 6, total: 1950.25, status: 'DELIVERED', date: '2026-05-15' },
+  { id: 'ORD-007', supplier: 'MindCare', items: 3, total: 780.00, status: 'CANCELLED', date: '2026-05-14' },
+  { id: 'ORD-008', supplier: 'GastroPharm', items: 7, total: 2450.50, status: 'PROCESSING', date: '2026-05-21' },
+];
+&nbsp;
+export const mockSalesData = <span class="cstat-no" title="statement not covered" >[</span>
+  { label: 'Mon', value: 1250 },
+  { label: 'Tue', value: 1890 },
+  { label: 'Wed', value: 1450 },
+  { label: 'Thu', value: 2100 },
+  { label: 'Fri', value: 1780 },
+  { label: 'Sat', value: 980 },
+  { label: 'Sun', value: 650 },
+];
+&nbsp;
+export const mockActivityLogs = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 1, action: 'Stock Updated', detail: 'Amoxicillin 500mg +50 units', user: 'Dr. Smith', timestamp: '2026-05-20 14:32', type: 'stock' },
+  { id: 2, action: 'Reservation Created', detail: 'R-001 by Sarah Johnson', user: 'System', timestamp: '2026-05-20 13:15', type: 'reservation' },
+  { id: 3, action: 'Order Received', detail: 'ORD-002 from MediSupply', user: 'System', timestamp: '2026-05-20 11:45', type: 'order' },
+  { id: 4, action: 'Low Stock Alert', detail: 'Lisinopril 10mg below threshold', user: 'System', timestamp: '2026-05-20 10:00', type: 'alert' },
+  { id: 5, action: 'Price Updated', detail: 'Metformin 850mg $8.50 → $9.00', user: 'Admin', timestamp: '2026-05-19 16:20', type: 'price' },
+  { id: 6, action: 'Medication Added', detail: 'Gabapentin 300mg added to inventory', user: 'Dr. Smith', timestamp: '2026-05-19 14:00', type: 'stock' },
+  { id: 7, action: 'Expiry Warning', detail: 'Warfarin 5mg expired', user: 'System', timestamp: '2026-05-19 09:00', type: 'alert' },
+  { id: 8, action: 'Reservation Completed', detail: 'R-004 picked up by Robert Wilson', user: 'System', timestamp: '2026-05-18 15:30', type: 'reservation' },
+];
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-06-09T14:48:31.203Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    

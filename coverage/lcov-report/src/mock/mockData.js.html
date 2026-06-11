@@ -1,0 +1,628 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/mock/mockData.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/mock</a> mockData.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/8</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/8</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const demoCredentials = <span class="cstat-no" title="statement not covered" >{</span>
+  patient: { email: 'patient@dwakfjib.ma', password: 'patient123', role: 'USER', name: 'Amine Benali' },
+  pharmacien: { email: 'pharmacien@dwakfjib.ma', password: 'pharmacien123', role: 'PHARMACY', name: 'Dr. Fatima Zahra' },
+  distributeur: { email: 'distributeur@dwakfjib.ma', password: 'distributeur123', role: 'DISTRIBUTOR', name: 'Karim El Idrissi' },
+};
+&nbsp;
+export const patientProfile = <span class="cstat-no" title="statement not covered" >{</span>
+  nom: 'Amine Benali',
+  email: 'amine.benali@email.ma',
+  telephone: '+212 6 12 34 56 78',
+  dateNaissance: '1990-05-15',
+  groupeSanguin: 'A+',
+  allergenes: ['Pénicilline', 'Sulfamides', 'Arachides'],
+  maladiesChroniques: ['Asthme', 'Hypertension artérielle'],
+  mutuelle: 'CNOPS',
+  numeroMutuelle: 'CNOPS-2024-45821',
+  adresse: '12 Rue Oued Zem, Casablanca',
+  urgentContact: 'Fatima Benali (+212 6 98 76 54 32)',
+};
+&nbsp;
+export const patientVisites = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 'VIS-001', date: '2026-05-20', medecin: 'Dr. Idrissi', pharmacie: 'Pharmacie El Farah', medicaments: ['Amoxicilline 500mg', 'Paracétamol 1g'], motif: 'Infection respiratoire', cout: 180 },
+  { id: 'VIS-002', date: '2026-04-12', medecin: 'Dr. Chafik', pharmacie: 'Pharmacie Ibn Sina', medicaments: ['Ventoline 100µg'], motif: 'Crise d\'asthme légère', cout: 95 },
+  { id: 'VIS-003', date: '2026-03-08', medecin: 'Dr. Alaoui', pharmacie: 'Pharmacie du Centre', medicaments: ['Lisinopril 10mg', 'Amlodipine 5mg'], motif: 'Contrôle hypertension', cout: 210 },
+  { id: 'VIS-004', date: '2026-02-01', medecin: 'Dr. Idrissi', pharmacie: 'Pharmacie El Farah', medicaments: ['Augmentin 1g'], motif: 'Angine bactérienne', cout: 155 },
+  { id: 'VIS-005', date: '2025-12-15', medecin: 'Dr. Benani', pharmacie: 'Pharmacie Al Amal', medicaments: ['Vitamine D3 1000UI'], motif: 'Examen de routine', cout: 75 },
+  { id: 'VIS-006', date: '2025-11-20', medecin: 'Dr. Chafik', pharmacie: 'Pharmacie Ibn Sina', medicaments: ['Singulair 10mg'], motif: 'Allergie saisonnière', cout: 130 },
+];
+&nbsp;
+export const patientRenouvellements = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 'REN-001', medicament: 'Lisinopril 10mg', dosage: '1 comprimé/jour', stockJours: 12, statut: 'URGENT', pharmacie: 'Pharmacie El Farah' },
+  { id: 'REN-002', medicament: 'Amlodipine 5mg', dosage: '1 comprimé/jour', stockJours: 25, statut: 'BIENTOT', pharmacie: 'Pharmacie du Centre' },
+  { id: 'REN-003', medicament: 'Ventoline 100µg', dosage: 'À la demande', stockJours: 60, statut: 'OK', pharmacie: 'Pharmacie Ibn Sina' },
+  { id: 'REN-004', medicament: 'Vitamine D3 1000UI', dosage: '1 capsule/semaine', stockJours: 180, statut: 'OK', pharmacie: 'Pharmacie Al Amal' },
+];
+&nbsp;
+export const patientFidelite = <span class="cstat-no" title="statement not covered" >{</span>
+  points: 2450,
+  niveau: 'Or',
+  prochainNiveau: 'Platine',
+  pointsRestants: 550,
+  avantages: ['Livraison gratuite', 'Réduction 10%', 'Consultation prioritaire'],
+  historiquePoints: [
+    { date: '2026-05-20', points: 180, source: 'Achat Amoxicilline', type: 'gagnés' },
+    { date: '2026-05-01', points: 500, source: 'Bonus fidélité mensuel', type: 'gagnés' },
+    { date: '2026-04-12', points: 95, source: 'Achat Ventoline', type: 'gagnés' },
+    { date: '2026-03-08', points: 210, source: 'Achat Lisinopril + Amlodipine', type: 'gagnés' },
+    { date: '2026-02-15', points: 150, source: 'Réduction utilisée', type: 'dépensés' },
+  ],
+  recompensesDisponibles: [
+    { id: 'R-01', nom: 'Bon d\'achat 50 DH', points: 1000, description: 'Valable dans toutes les pharmacies partenaires' },
+    { id: 'R-02', nom: 'Bilan santé gratuit', points: 2000, description: 'Inclut tension, glycémie et cholestérol' },
+    { id: 'R-03', nom: 'Remise 20% sur prochaine visite', points: 3000, description: 'Consultation médicale complète' },
+  ],
+};
+&nbsp;
+export const pharmacienData = <span class="cstat-no" title="statement not covered" >{</span>
+  nom: 'Dr. Fatima Zahra',
+  pharmacie: 'Pharmacie El Farah',
+  adresse: '45 Boulevard Mohammed V, Casablanca',
+  telephone: '+212 5 22 45 67 89',
+  ice: 'ICE-2024-785412',
+  licence: 'PH-2024-1589',
+  patientsFideles: [
+    { id: 1, nom: 'Amine Benali', visites: 18, totalDepense: '4 580 DH', dernierAchat: '2026-05-20', fidelite: 'Or' },
+    { id: 2, nom: 'Salma El Ouafi', visites: 14, totalDepense: '3 920 DH', dernierAchat: '2026-05-18', fidelite: 'Or' },
+    { id: 3, nom: 'Hassan Mokhtari', visites: 11, totalDepense: '2 850 DH', dernierAchat: '2026-05-15', fidelite: 'Argent' },
+    { id: 4, nom: 'Nadia Berrada', visites: 9, totalDepense: '2 100 DH', dernierAchat: '2026-05-12', fidelite: 'Argent' },
+    { id: 5, nom: 'Omar Tazi', visites: 7, totalDepense: '1 670 DH', dernierAchat: '2026-05-10', fidelite: 'Bronze' },
+    { id: 6, nom: 'Leila Benjelloun', visites: 6, totalDepense: '1 430 DH', dernierAchat: '2026-05-08', fidelite: 'Bronze' },
+    { id: 7, nom: 'Youssef El Fassi', visites: 5, totalDepense: '1 220 DH', dernierAchat: '2026-05-05', fidelite: 'Bronze' },
+    { id: 8, nom: 'Khadija Amrani', visites: 4, totalDepense: '980 DH', dernierAchat: '2026-05-01', fidelite: 'Bronze' },
+  ],
+  stock: [
+    { id: 1, nom: 'Amoxicilline 500mg', categorie: 'Antibiotiques', stock: 245, seuilAlerte: 30, prix: 12.99, statut: 'OK' },
+    { id: 2, nom: 'Paracétamol 1g', categorie: 'Antalgiques', stock: 520, seuilAlerte: 50, prix: 5.50, statut: 'OK' },
+    { id: 3, nom: 'Lisinopril 10mg', categorie: 'Cardiologie', stock: 15, seuilAlerte: 25, prix: 15.75, statut: 'ALERTE' },
+    { id: 4, nom: 'Ventoline 100µg', categorie: 'Respiratoire', stock: 8, seuilAlerte: 20, prix: 22.00, statut: 'ALERTE' },
+    { id: 5, nom: 'Augmentin 1g', categorie: 'Antibiotiques', stock: 0, seuilAlerte: 15, prix: 28.50, statut: 'RUPTURE' },
+    { id: 6, nom: 'Metformine 850mg', categorie: 'Diabète', stock: 189, seuilAlerte: 40, prix: 8.50, statut: 'OK' },
+    { id: 7, nom: 'Ibuprofène 400mg', categorie: 'Anti-inflammatoires', stock: 320, seuilAlerte: 60, prix: 5.99, statut: 'OK' },
+    { id: 8, nom: 'Oméprazole 20mg', categorie: 'Gastro', stock: 0, seuilAlerte: 20, prix: 9.99, statut: 'RUPTURE' },
+    { id: 9, nom: 'Atorvastatine 20mg', categorie: 'Cardiologie', stock: 156, seuilAlerte: 30, prix: 22.50, statut: 'OK' },
+    { id: 10, nom: 'Doliprane 500mg', categorie: 'Antalgiques', stock: 45, seuilAlerte: 20, prix: 4.25, statut: 'OK' },
+  ],
+  ventesHebdo: [
+    { jour: 'Lun', ventes: 2850, objectif: 2500 },
+    { jour: 'Mar', ventes: 3200, objectif: 2500 },
+    { jour: 'Mer', ventes: 1950, objectif: 2500 },
+    { jour: 'Jeu', ventes: 4100, objectif: 2500 },
+    { jour: 'Ven', ventes: 3650, objectif: 2500 },
+    { jour: 'Sam', ventes: 1800, objectif: 2000 },
+    { jour: 'Dim', ventes: 950, objectif: 1500 },
+  ],
+  activiteRecente: [
+    { id: 1, action: 'Stock mis à jour', detail: 'Amoxicilline 500mg +50 unités', timestamp: '2026-05-20 14:32' },
+    { id: 2, action: 'Réservation traitée', detail: 'R-001 par Amine Benali', timestamp: '2026-05-20 13:15' },
+    { id: 3, action: 'Commande reçue', detail: 'CMD-002 de DistriPharma', timestamp: '2026-05-20 11:45' },
+    { id: 4, action: 'Alerte stock bas', detail: 'Lisinopril 10mg sous seuil', timestamp: '2026-05-20 10:00' },
+    { id: 5, action: 'Patient fidélisé', detail: 'Salma El Ouafi niveau Or', timestamp: '2026-05-19 16:20' },
+  ],
+  iaAlertes: [
+    { id: 'IA-01', type: 'PREDICTION', message: 'Rupture prévue : Augmentin 1g dans 3 jours', priorite: 'HAUTE', date: '2026-05-20' },
+    { id: 'IA-02', type: 'INTERACTION', message: 'Interaction détectée : Lisinopril + Ibuprofène chez patient #12', priorite: 'CRITIQUE', date: '2026-05-20' },
+    { id: 'IA-03', type: 'DEMANDE', message: 'Tendance haussière : Antihistaminiques (+35% vs mois dernier)', priorite: 'MOYENNE', date: '2026-05-19' },
+    { id: 'IA-04', type: 'FIDELITE', message: 'Patient Amine Benali éligible bonus fidélité Platine', priorite: 'BASSE', date: '2026-05-18' },
+  ],
+};
+&nbsp;
+export const distributeurData = <span class="cstat-no" title="statement not covered" >{</span>
+  nom: 'Karim El Idrissi',
+  entreprise: 'DistriPharma Maroc',
+  adresse: 'Zone Industrielle Sidi Bernoussi, Casablanca',
+  telephone: '+212 5 22 88 99 00',
+  ice: 'ICE-2024-998877',
+  registreCommerce: 'RC-2024-CASA-4521',
+  kpis: {
+    revenuTotal: '285 400 DH',
+    commandesMois: 142,
+    pharmaciesActives: 38,
+    produitsDisponibles: 245,
+    tauxLivraison: '96.8%',
+    noteMoyenne: '4.7 / 5',
+  },
+  livraisonsEnAttente: [
+    { id: 'LIV-001', pharmacie: 'Pharmacie El Farah', articles: 45, statut: 'EN_TRANSIT', livreur: 'Hassan El Omari', estimation: '2026-05-21', progression: 65 },
+    { id: 'LIV-002', pharmacie: 'Pharmacie Ibn Sina', articles: 32, statut: 'PREPARATION', livreur: 'Non assigné', estimation: '2026-05-22', progression: 30 },
+    { id: 'LIV-003', pharmacie: 'Pharmacie du Centre', articles: 56, statut: 'EN_ATTENTE', livreur: 'Non assigné', estimation: '2026-05-23', progression: 0 },
+    { id: 'LIV-004', pharmacie: 'Pharmacie Al Amal', articles: 28, statut: 'LIVRE', livreur: 'Rachid El Fassi', estimation: '2026-05-20', progression: 100 },
+    { id: 'LIV-005', pharmacie: 'Pharmacie Atlas', articles: 38, statut: 'EN_TRANSIT', livreur: 'Youssef Ait Ali', estimation: '2026-05-21', progression: 45 },
+    { id: 'LIV-006', pharmacie: 'Pharmacie Al Karama', articles: 20, statut: 'EN_ATTENTE', livreur: 'Non assigné', estimation: '2026-05-24', progression: 0 },
+  ],
+  topPartenaires: [
+    { nom: 'Pharmacie El Farah', commandes: 45, revenu: '85 500 DH' },
+    { nom: 'Pharmacie Ibn Sina', commandes: 38, revenu: '72 100 DH' },
+    { nom: 'Pharmacie du Centre', commandes: 32, revenu: '58 900 DH' },
+    { nom: 'Pharmacie Al Amal', commandes: 28, revenu: '45 400 DH' },
+    { nom: 'Pharmacie Atlas', commandes: 22, revenu: '42 800 DH' },
+  ],
+  livreurs: [
+    { id: 1, nom: 'Hassan El Omari', statut: 'actif', livraisonsAujourdhui: 5, note: 4.9 },
+    { id: 2, nom: 'Youssef Ait Ali', statut: 'actif', livraisonsAujourdhui: 3, note: 4.8 },
+    { id: 3, nom: 'Rachid El Fassi', statut: 'disponible', livraisonsAujourdhui: 0, note: 4.7 },
+    { id: 4, nom: 'Mohamed Bennis', statut: 'actif', livraisonsAujourdhui: 4, note: 4.6 },
+    { id: 5, nom: 'Hicham Ouazzani', statut: 'congé', livraisonsAujourdhui: 0, note: 4.5 },
+  ],
+  tendanceCommandes: [
+    { mois: 'Jan', valeur: 185 },
+    { mois: 'Fév', valeur: 212 },
+    { mois: 'Mar', valeur: 198 },
+    { mois: 'Avr', valeur: 245 },
+    { mois: 'Mai', valeur: 282 },
+    { mois: 'Juin', valeur: 268 },
+  ],
+  tendanceRevenu: [
+    { mois: 'Jan', valeur: 18500 },
+    { mois: 'Fév', valeur: 21200 },
+    { mois: 'Mar', valeur: 19800 },
+    { mois: 'Avr', valeur: 24500 },
+    { mois: 'Mai', valeur: 28200 },
+    { mois: 'Juin', valeur: 26800 },
+  ],
+  produitsDemande: [
+    { nom: 'Paracétamol 1g', commandes: 342, tendance: 'hausse' },
+    { nom: 'Amoxicilline 500mg', commandes: 298, tendance: 'hausse' },
+    { nom: 'Vitamine D3 1000UI', commandes: 275, tendance: 'hausse' },
+    { nom: 'Metformine 850mg', commandes: 245, tendance: 'hausse' },
+    { nom: 'Atorvastatine 20mg', commandes: 189, tendance: 'baisse' },
+    { nom: 'Lisinopril 10mg', commandes: 156, tendance: 'baisse' },
+  ],
+};
+&nbsp;
+export const interactionsMedicamenteuses = <span class="cstat-no" title="statement not covered" >[</span>
+  { medicament1: 'Lisinopril 10mg', medicament2: 'Ibuprofène 400mg', gravite: 'ÉLEVÉE', effet: 'Réduction de l\'effet antihypertenseur, risque d\'insuffisance rénale', recommandation: 'Surveiller la tension artérielle et la fonction rénale' },
+  { medicament1: 'Warfarine 5mg', medicament2: 'Amoxicilline 500mg', gravite: 'MODÉRÉE', effet: 'Augmentation du risque hémorragique', recommandation: 'Surveiller INR, ajuster dose si nécessaire' },
+  { medicament1: 'Metformine 850mg', medicament2: 'Ibuprofène 400mg', gravite: 'MODÉRÉE', effet: 'Risque d\'acidose lactique accru', recommandation: 'Surveiller la fonction rénale' },
+  { medicament1: 'Atorvastatine 20mg', medicament2: 'Antifongiques azolés', gravite: 'ÉLEVÉE', effet: 'Augmentation du risque de myopathie/rhabdomyolyse', recommandation: 'Éviter l\'association ou réduire dose statine' },
+  { medicament1: 'Ventoline 100µg', medicament2: 'Bêta-bloquants', gravite: 'MOYENNE', effet: 'Diminution de l\'efficacité bronchodilatatrice', recommandation: 'Utiliser un bêta-2 agoniste avec prudence' },
+  { medicament1: 'Oméprazole 20mg', medicament2: 'Clopidogrel 75mg', gravite: 'MODÉRÉE', effet: 'Réduction de l\'activation du clopidogrel', recommandation: 'Utiliser un IPP sans interaction (pantoprazole)' },
+  { medicament1: 'Augmentin 1g', medicament2: 'Méthotrexate', gravite: 'ÉLEVÉE', effet: 'Augmentation de la toxicité du méthotrexate', recommandation: 'Éviter l\'association, surveiller les taux' },
+];
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-06-09T14:48:31.203Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    

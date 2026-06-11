@@ -1,0 +1,241 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/mock/userData.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/mock</a> userData.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/6</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/6</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const mockUserMedications = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 1, name: 'Amoxicillin 500mg', category: 'Antibiotics', price: 12.99, pharmacy: 'HealthPlus Pharmacy', distance: '0.8km', inStock: true, rating: 4.5 },
+  { id: 2, name: 'Metformin 850mg', category: 'Diabetes', price: 8.50, pharmacy: 'MediCare Center', distance: '1.2km', inStock: true, rating: 4.7 },
+  { id: 3, name: 'Lisinopril 10mg', category: 'Cardiology', price: 15.75, pharmacy: 'GreenCross Pharmacy', distance: '2.1km', inStock: false, rating: 4.3 },
+  { id: 4, name: 'Ibuprofen 400mg', category: 'Pain Relief', price: 5.99, pharmacy: 'HealthPlus Pharmacy', distance: '0.8km', inStock: true, rating: 4.8 },
+  { id: 5, name: 'Omeprazole 20mg', category: 'Gastro', price: 9.99, pharmacy: 'Wellness Hub', distance: '3.5km', inStock: true, rating: 4.4 },
+  { id: 6, name: 'Atorvastatin 20mg', category: 'Cardiology', price: 22.50, pharmacy: 'City Pharmacy', distance: '4.2km', inStock: true, rating: 4.6 },
+  { id: 7, name: 'Sertraline 50mg', category: 'Psychiatry', price: 13.25, pharmacy: 'MediCare Center', distance: '1.2km', inStock: true, rating: 4.2 },
+  { id: 8, name: 'Gabapentin 300mg', category: 'Neurology', price: 16.75, pharmacy: 'GreenCross Pharmacy', distance: '2.1km', inStock: false, rating: 4.1 },
+];
+&nbsp;
+export const mockPharmacies = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 1, name: 'HealthPlus Pharmacy', address: '123 Main St', distance: '0.8km', rating: 4.8, open: true, hours: '8AM - 10PM', phone: '+1 555-0101' },
+  { id: 2, name: 'MediCare Center', address: '456 Oak Ave', distance: '1.2km', rating: 4.6, open: true, hours: '7AM - 11PM', phone: '+1 555-0102' },
+  { id: 3, name: 'GreenCross Pharmacy', address: '789 Pine Rd', distance: '2.1km', rating: 4.4, open: false, hours: '9AM - 8PM', phone: '+1 555-0103' },
+  { id: 4, name: 'Wellness Hub', address: '321 Elm St', distance: '3.5km', rating: 4.7, open: true, hours: '24/7', phone: '+1 555-0104' },
+  { id: 5, name: 'City Pharmacy', address: '654 Birch Blvd', distance: '4.2km', rating: 4.3, open: true, hours: '8AM - 9PM', phone: '+1 555-0105' },
+];
+&nbsp;
+export const mockReservations = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 'RES-001', medication: 'Amoxicillin 500mg', pharmacy: 'HealthPlus Pharmacy', date: '2026-05-22', quantity: 30, status: 'CONFIRMED', price: 12.99 },
+  { id: 'RES-002', medication: 'Metformin 850mg', pharmacy: 'MediCare Center', date: '2026-05-20', quantity: 60, status: 'READY', price: 8.50 },
+  { id: 'RES-003', medication: 'Ibuprofen 400mg', pharmacy: 'HealthPlus Pharmacy', date: '2026-05-18', quantity: 20, status: 'COMPLETED', price: 5.99 },
+  { id: 'RES-004', medication: 'Omeprazole 20mg', pharmacy: 'Wellness Hub', date: '2026-05-25', quantity: 30, status: 'PENDING', price: 9.99 },
+  { id: 'RES-005', medication: 'Sertraline 50mg', pharmacy: 'MediCare Center', date: '2026-05-15', quantity: 30, status: 'CANCELLED', price: 13.25 },
+  { id: 'RES-006', medication: 'Atorvastatin 20mg', pharmacy: 'City Pharmacy', date: '2026-05-28', quantity: 30, status: 'CONFIRMED', price: 22.50 },
+];
+&nbsp;
+export const mockNotifications = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 1, type: 'reservation', title: 'Reservation Ready', message: 'Your Metformin 850mg is ready for pickup', time: '2 hours ago', read: false },
+  { id: 2, type: 'reminder', title: 'Pickup Reminder', message: 'Don\'t forget to pick up your Amoxicillin tomorrow', time: '5 hours ago', read: false },
+  { id: 3, type: 'system', title: 'Profile Updated', message: 'Your profile information has been updated successfully', time: '1 day ago', read: true },
+  { id: 4, type: 'reservation', title: 'Reservation Confirmed', message: 'Your Omeprazole 20mg reservation has been confirmed', time: '2 days ago', read: true },
+  { id: 5, type: 'alert', title: 'Medication Restocked', message: 'Lisinopril 10mg is now back in stock at GreenCross Pharmacy', time: '3 days ago', read: true },
+  { id: 6, type: 'system', title: 'Welcome Back', message: 'Welcome back to DwakFJib Healthcare', time: '1 week ago', read: true },
+];
+&nbsp;
+export const mockFavorites = <span class="cstat-no" title="statement not covered" >[</span>
+  { id: 1, name: 'Amoxicillin 500mg', category: 'Antibiotics', price: 12.99, pharmacy: 'HealthPlus Pharmacy', inStock: true },
+  { id: 2, name: 'Metformin 850mg', category: 'Diabetes', price: 8.50, pharmacy: 'MediCare Center', inStock: true },
+  { id: 3, name: 'Ibuprofen 400mg', category: 'Pain Relief', price: 5.99, pharmacy: 'HealthPlus Pharmacy', inStock: true },
+  { id: 4, name: 'Omeprazole 20mg', category: 'Gastro', price: 9.99, pharmacy: 'Wellness Hub', inStock: true },
+  { id: 5, name: 'Atorvastatin 20mg', category: 'Cardiology', price: 22.50, pharmacy: 'City Pharmacy', inStock: true },
+];
+&nbsp;
+export const mockUserStats = <span class="cstat-no" title="statement not covered" >{</span>
+  totalReservations: 24,
+  completed: 18,
+  pending: 2,
+  favorites: 5,
+  certificates: 3,
+};
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-06-09T14:48:31.203Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    
