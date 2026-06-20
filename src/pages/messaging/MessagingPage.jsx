@@ -4,6 +4,7 @@ import {
   MessageSquare, Search, Plus, Send, Paperclip, Check, CheckCheck,
   ChevronLeft, Trash2, User, X, Clock, Loader2
 } from 'lucide-react';
+import toast from 'react-hot-toast';
 import { useAuth } from '../../context/AuthContext';
 import { messagingService } from '../../api';
 
@@ -58,7 +59,7 @@ const MessagingPage = () => {
       const data = res.data?.data || res.data || [];
       setConversations(data);
     } catch {
-      console.error('Failed to fetch conversations');
+      toast.error('Impossible de charger les conversations');
     } finally {
       setLoading(false);
     }
@@ -73,7 +74,7 @@ const MessagingPage = () => {
       setMessages(Array.isArray(data) ? data.reverse() : []);
       scrollToBottom();
     } catch {
-      console.error('Failed to fetch messages');
+      toast.error('Impossible de charger les messages');
     } finally {
       setLoadingMessages(false);
     }
@@ -137,7 +138,7 @@ const MessagingPage = () => {
         )
       );
     } catch {
-      console.error('Failed to send message');
+      toast.error('Impossible d\'envoyer le message');
     } finally {
       setSending(false);
     }
@@ -158,14 +159,8 @@ const MessagingPage = () => {
     setSearchingUsers(true);
     try {
       const res = await messagingService.getConversations({ search: query });
-      const existing = res.data?.data || [];
-      const userIds = new Set();
-      existing.forEach((c) => {
-        c.participants?.forEach((p) => userIds.add(Number(p.id)));
-      });
-
-      const allUsersRes = await messagingService.getConversations({ search: query });
-      setSearchResults([]);
+      const results = res.data?.data || [];
+      setSearchResults(results);
     } catch {
       setSearchResults([]);
     } finally {
@@ -195,7 +190,7 @@ const MessagingPage = () => {
       setNewConversationMessage('');
       setSelectedConversation(newConv);
     } catch {
-      console.error('Failed to create conversation');
+      toast.error('Impossible de créer la conversation');
     } finally {
       setSendingNew(false);
     }

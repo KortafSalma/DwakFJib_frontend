@@ -26,8 +26,8 @@ export const usePaginatedApi = (apiFn, initialParams = {}, options = {}) => {
         setData(payload);
       }
 
-      if (payload?.meta || responseData?.pagination) {
-        const m = payload.meta || responseData.pagination;
+      if (payload?.meta || responseData?.meta || responseData?.pagination) {
+        const m = payload.meta || responseData.meta || responseData.pagination;
         setMeta({
           currentPage: m.current_page ?? m.currentPage,
           lastPage: m.last_page ?? m.lastPage,

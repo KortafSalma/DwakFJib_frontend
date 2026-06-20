@@ -1274,24 +1274,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1326,6 +1308,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -2194,12 +2194,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Truck, Search, Check, X, Eye, MapPin, Clock,
-  Package, Star, Phone, Mail, Calendar, FileText,
+  Truck, Search, X, Eye, MapPin, Clock,
+  Star, Calendar,
   ChevronLeft, ChevronRight, MoreVertical, Trash2,
-  User, AlertTriangle, CheckCircle, Activity,
+  AlertTriangle, CheckCircle, Activity,
   Filter, Download, Plus, Building2, Globe,
-  BarChart3, Users, Verified, X as XIcon
+  BarChart3, Verified
 } from 'lucide-react';
 import { useDeleteDistributor, useUpdateDistributor } from '../../hooks';
 import { distributorService } from '../../api';
@@ -2330,24 +2330,6 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
 <span class="cstat-no" title="statement not covered" >    setSelectedDistributor(null);</span>
   }, [updateDistributor]);
 &nbsp;
-  const <span class="cstat-no" title="statement not covered" >handleExport = <span class="fstat-no" title="function not covered" >useCallback(() =&gt; {</span></span>
-    const headers = <span class="cstat-no" title="statement not covered" >['Distributor Name', 'Company', 'Email', 'City', 'Status', 'Verified', 'Registration Date'];</span>
-    const rows = <span class="cstat-no" title="statement not covered" >distributorsDisplayed.<span class="fstat-no" title="function not covered" >map((d</span>) =&gt; <span class="cstat-no" title="statement not covered" >[</span></span>
-      d.name, d.company || '', d.email || '', d.city,
-      d.isVerified ? 'Active' : 'Pending',
-      d.isVerified ? 'Yes' : 'No',
-      d.createdDate,
-    ]);
-    const csv = <span class="cstat-no" title="statement not covered" >[headers.join(','), ...rows.<span class="fstat-no" title="function not covered" >map((r</span>) =&gt; <span class="cstat-no" title="statement not covered" >r.join(','))</span>].join('\n');</span>
-    const blob = <span class="cstat-no" title="statement not covered" >new Blob([csv], { type: 'text/csv' });</span>
-    const url = <span class="cstat-no" title="statement not covered" >URL.createObjectURL(blob);</span>
-    const a = <span class="cstat-no" title="statement not covered" >document.createElement('a');</span>
-<span class="cstat-no" title="statement not covered" >    a.href = url;</span>
-<span class="cstat-no" title="statement not covered" >    a.download = `distributors-export-${new Date().toISOString().split('T')[0]}.csv`;</span>
-<span class="cstat-no" title="statement not covered" >    a.click();</span>
-<span class="cstat-no" title="statement not covered" >    URL.revokeObjectURL(url);</span>
-  }, [distributorsDisplayed]);
-&nbsp;
   const <span class="cstat-no" title="statement not covered" >buildDistributors = <span class="fstat-no" title="function not covered" >useCallback((a</span>piData, fallbackPending, fallbackApproved) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    if (apiData &amp;&amp; apiData.length &gt; 0) {</span>
 <span class="cstat-no" title="statement not covered" >      return apiData.<span class="fstat-no" title="function not covered" >map((d</span>) =&gt; (<span class="cstat-no" title="statement not covered" >{</span></span>
@@ -2397,6 +2379,24 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
 <span class="cstat-no" title="statement not covered" >    if (regionFilter !== 'all') <span class="cstat-no" title="statement not covered" >filtered = filtered.<span class="fstat-no" title="function not covered" >filter((d</span>) =&gt; <span class="cstat-no" title="statement not covered" >d.city === regionFilter)</span>;</span></span>
 <span class="cstat-no" title="statement not covered" >    return filtered;</span>
   }, [distributors, activeTab, regionFilter]);
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >handleExport = <span class="fstat-no" title="function not covered" >useCallback(() =&gt; {</span></span>
+    const headers = <span class="cstat-no" title="statement not covered" >['Distributor Name', 'Company', 'Email', 'City', 'Status', 'Verified', 'Registration Date'];</span>
+    const rows = <span class="cstat-no" title="statement not covered" >distributorsDisplayed.<span class="fstat-no" title="function not covered" >map((d</span>) =&gt; <span class="cstat-no" title="statement not covered" >[</span></span>
+      d.name, d.company || '', d.email || '', d.city,
+      d.isVerified ? 'Active' : 'Pending',
+      d.isVerified ? 'Yes' : 'No',
+      d.createdDate,
+    ]);
+    const csv = <span class="cstat-no" title="statement not covered" >[headers.join(','), ...rows.<span class="fstat-no" title="function not covered" >map((r</span>) =&gt; <span class="cstat-no" title="statement not covered" >r.join(','))</span>].join('\n');</span>
+    const blob = <span class="cstat-no" title="statement not covered" >new Blob([csv], { type: 'text/csv' });</span>
+    const url = <span class="cstat-no" title="statement not covered" >URL.createObjectURL(blob);</span>
+    const a = <span class="cstat-no" title="statement not covered" >document.createElement('a');</span>
+<span class="cstat-no" title="statement not covered" >    a.href = url;</span>
+<span class="cstat-no" title="statement not covered" >    a.download = `distributors-export-${new Date().toISOString().split('T')[0]}.csv`;</span>
+<span class="cstat-no" title="statement not covered" >    a.click();</span>
+<span class="cstat-no" title="statement not covered" >    URL.revokeObjectURL(url);</span>
+  }, [distributorsDisplayed]);
 &nbsp;
   const <span class="cstat-no" title="statement not covered" >regions = <span class="fstat-no" title="function not covered" >useMemo(() =&gt; <span class="cstat-no" title="statement not covered" >g</span>etRegions(distributors), [</span>distributors]);</span>
 &nbsp;
@@ -2509,7 +2509,7 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
                 /&gt;
                 {search &amp;&amp; (
                   &lt;button <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >h</span>andleSearch('')} c</span>lassName="absolute right-3 top-1/2 -translate-y-1/2 text-contrast-muted hover:text-contrast-secondary transition-colors"&gt;
-                    &lt;XIcon className="w-4 h-4" /&gt;
+                    &lt;X className="w-4 h-4" /&gt;
                   &lt;/button&gt;
                 )}
               &lt;/div&gt;
@@ -3014,7 +3014,7 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
 <span class="fstat-no" title="function not covered" >                    onClick={() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etSelectedDistributor(null)}</span>
                     className="absolute top-4 right-4 w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-all"
                   &gt;
-                    &lt;XIcon className="w-4 h-4" /&gt;
+                    &lt;X className="w-4 h-4" /&gt;
                   &lt;/button&gt;
                 &lt;/div&gt;
 &nbsp;
@@ -3262,7 +3262,7 @@ export default DistributorApprovals;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-06-09T14:48:31.203Z
+                at 2026-06-12T04:41:11.399Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

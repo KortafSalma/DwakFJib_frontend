@@ -33,13 +33,16 @@ const PharmacyDashboard = () => {
   const [activeTab, setActiveTab] = useState('apercu');
   const [showAddMedication, setShowAddMedication] = useState(false);
 
-  const isNewPharmacy = pharmacienData.stock.length === 0;
+  const stock = pharmacienData?.stock ?? [];
+  const patientsFideles = pharmacienData?.patientsFideles ?? [];
 
-  const predictionsStock = suggererReapprovisionnement(pharmacienData.stock);
+  const isNewPharmacy = stock.length === 0;
+
+  const predictionsStock = suggererReapprovisionnement(stock);
   const analysePatients = segmenterPatients(
-    pharmacienData.patientsFideles.map((p) => ({
+    patientsFideles.map((p) => ({
       ...p,
-      visites: patientVisitesEquivalent(p.visites),
+      visites: patientVisitesEquivalent(p?.visites ?? 0),
     }))
   );
 

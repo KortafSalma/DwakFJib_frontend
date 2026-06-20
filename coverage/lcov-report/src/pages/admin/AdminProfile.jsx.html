@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/86</span>
+                <span class='fraction'>0/83</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/72</span>
+                <span class='fraction'>0/69</span>
             </div>
         
             
@@ -520,10 +520,7 @@
 <a name='L455'></a><a href='#L455'>455</a>
 <a name='L456'></a><a href='#L456'>456</a>
 <a name='L457'></a><a href='#L457'>457</a>
-<a name='L458'></a><a href='#L458'>458</a>
-<a name='L459'></a><a href='#L459'>459</a>
-<a name='L460'></a><a href='#L460'>460</a>
-<a name='L461'></a><a href='#L461'>461</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L458'></a><a href='#L458'>458</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -605,7 +602,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -633,10 +629,8 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -989,7 +983,7 @@ import {
   User, Shield, Bell, SlidersHorizontal, Activity, Eye,
   Mail, Phone, Camera, Save, X, Key, MapPin, Calendar,
   ChevronDown, AlertTriangle, Trash2, LogOut,
-  Check, Globe, Lock, Smartphone, Building2,
+  Lock, Smartphone, Building2,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 &nbsp;
@@ -1063,16 +1057,15 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
   const [activeSection, <span class="cstat-no" title="statement not covered" >setActiveSection] = useState('personal');</span>
   const [mobileOpen, <span class="cstat-no" title="statement not covered" >setMobileOpen] = useState(null);</span>
   const [hasChanges, <span class="cstat-no" title="statement not covered" >setHasChanges] = useState(false);</span>
-  const [profilePhoto, <span class="cstat-no" title="statement not covered" >setProfilePhoto] = useState(null);</span>
   const [photoPreview, <span class="cstat-no" title="statement not covered" >setPhotoPreview] = useState(user?.photo || null);</span>
   const <span class="cstat-no" title="statement not covered" >photoRef = useRef(null);</span>
 &nbsp;
-  const [profile, <span class="cstat-no" title="statement not covered" >setProfile] = useState({</span>
-    name: 'Sarah Chen',
-    email: 'sarah.chen@mediconnect.com',
+  const [<span class="cstat-no" title="statement not covered" >profile] = useState({</span>
+    name: 'DwakFJIb Admin',
+    email: 'Dwakfjib2026@gmail.com',
     role: 'Super Admin',
-    phone: '+1 (555) 123-4567',
-    location: 'New York, USA',
+    phone: '+212 5 22 000000',
+    location: 'Casablanca, Marocco',
     department: 'Platform Administration',
     joined: 'Jan 15, 2023',
   });
@@ -1089,7 +1082,6 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
   const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >handlePhotoUpload = (e</span>) =&gt; {</span>
     const file = <span class="cstat-no" title="statement not covered" >e.target.files[0];</span>
 <span class="cstat-no" title="statement not covered" >    if (!file) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >    setProfilePhoto(file);</span>
     const reader = <span class="cstat-no" title="statement not covered" >new FileReader();</span>
 <span class="cstat-no" title="statement not covered" >    reader.<span class="fstat-no" title="function not covered" >onload = (e</span>v) =&gt; <span class="cstat-no" title="statement not covered" >setPhotoPreview(ev.target.result);</span></span>
 <span class="cstat-no" title="statement not covered" >    reader.readAsDataURL(file);</span>
@@ -1097,7 +1089,6 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
   };
 &nbsp;
   const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >removePhoto = () =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >    setProfilePhoto(null);</span>
 <span class="cstat-no" title="statement not covered" >    setPhotoPreview(null);</span>
 <span class="cstat-no" title="statement not covered" >    setHasChanges(true);</span>
   };
@@ -1450,7 +1441,7 @@ export default AdminProfile;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-06-09T14:48:31.203Z
+                at 2026-06-12T04:41:11.399Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

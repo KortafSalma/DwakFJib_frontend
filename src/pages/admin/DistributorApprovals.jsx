@@ -6,7 +6,7 @@ import {
   ChevronLeft, ChevronRight, MoreVertical, Trash2,
   AlertTriangle, CheckCircle, Activity,
   Filter, Download, Plus, Building2, Globe,
-  BarChart3, Verified, X as XIcon
+  BarChart3, Verified
 } from 'lucide-react';
 import { useDeleteDistributor, useUpdateDistributor } from '../../hooks';
 import { distributorService } from '../../api';
@@ -316,7 +316,7 @@ const DistributorApprovals = () => {
                 />
                 {search && (
                   <button onClick={() => handleSearch('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-contrast-muted hover:text-contrast-secondary transition-colors">
-                    <XIcon className="w-4 h-4" />
+                    <X className="w-4 h-4" />
                   </button>
                 )}
               </div>
@@ -821,7 +821,7 @@ const DistributorApprovals = () => {
                     onClick={() => setSelectedDistributor(null)}
                     className="absolute top-4 right-4 w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-all"
                   >
-                    <XIcon className="w-4 h-4" />
+                    <X className="w-4 h-4" />
                   </button>
                 </div>
 

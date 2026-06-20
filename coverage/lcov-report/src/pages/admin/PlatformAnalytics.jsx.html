@@ -32,14 +32,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/131</span>
+                <span class='fraction'>0/133</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/32</span>
+                <span class='fraction'>0/33</span>
             </div>
         
             
@@ -709,8 +709,7 @@
 <a name='L644'></a><a href='#L644'>644</a>
 <a name='L645'></a><a href='#L645'>645</a>
 <a name='L646'></a><a href='#L646'>646</a>
-<a name='L647'></a><a href='#L647'>647</a>
-<a name='L648'></a><a href='#L648'>648</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L647'></a><a href='#L647'>647</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -813,16 +812,15 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1362,14 +1360,14 @@ import { motion } from 'framer-motion';
 import {
   TrendingUp, Users, ShoppingCart, DollarSign, Store, Truck,
   Activity, BarChart3, Download, FileText, Calendar,
-  ChevronRight, MapPin, Package, CheckCircle, Clock,
-  AlertCircle, UserPlus,
+  MapPin, Package, UserPlus, Star,
 } from 'lucide-react';
 import { StatCard } from '../../components/ui';
 import {
   useAdminDashboard, useRevenueChart, useReservationChart,
   useTopPharmacies, useTopMedications, useActivityTimeline,
 } from '../../hooks';
+import formatMAD from '../../utils/currency';
 &nbsp;
 const dateRangeOptions = <span class="cstat-no" title="statement not covered" >[</span>
   { value: '7', label: '7 Days' },
@@ -1458,31 +1456,30 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
   const cy = <span class="cstat-no" title="statement not covered" >size / 2;</span>
   const r = <span class="cstat-no" title="statement not covered" >size * 0.38;</span>
   const circumference = <span class="cstat-no" title="statement not covered" >2 * Math.PI * r;</span>
-  let offset = <span class="cstat-no" title="statement not covered" >0;</span>
+  const segmentsWithOffsets = <span class="cstat-no" title="statement not covered" >segments.<span class="fstat-no" title="function not covered" >reduce((a</span>cc, seg) =&gt; {</span>
+    const prevOffset = <span class="cstat-no" title="statement not covered" >acc.length &gt; 0 ? acc[acc.length - 1].nextOffset : 0;</span>
+    const dashLen = (<span class="cstat-no" title="statement not covered" >seg.value / total) * circumference;</span>
+<span class="cstat-no" title="statement not covered" >    acc.push({ ...seg, dashLen, offset: prevOffset, nextOffset: prevOffset + dashLen });</span>
+<span class="cstat-no" title="statement not covered" >    return acc;</span>
+  }, []);
 <span class="cstat-no" title="statement not covered" >  return (</span>
     &lt;svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="transform -rotate-90"&gt;
       &lt;circle cx={cx} cy={cy} r={r} fill="none" stroke="#F1F5F9" strokeWidth={size * 0.1} /&gt;
-      {segments.<span class="fstat-no" title="function not covered" >map((s</span>eg, i) =&gt; {
-        const dashLen = (<span class="cstat-no" title="statement not covered" >seg.value / total) * circumference;</span>
-        const dash = <span class="cstat-no" title="statement not covered" >`${dashLen} ${circumference - dashLen}`;</span>
-        const strokeDashoffset = <span class="cstat-no" title="statement not covered" >-offset;</span>
-<span class="cstat-no" title="statement not covered" >        offset += dashLen;</span>
-<span class="cstat-no" title="statement not covered" >        return (</span>
-          &lt;motion.circle
-            key={i}
-            cx={cx} cy={cy} r={r}
-            fill="none"
-            stroke={seg.color}
-            strokeWidth={size * 0.1}
-            strokeDasharray={dash}
-            strokeDashoffset={0}
-            strokeLinecap="round"
-            initial={{ strokeDashoffset: circumference }}
-            animate={{ strokeDashoffset: strokeDashoffset - circumference }}
-            transition={{ duration: 0.8, delay: i * 0.1, ease: 'easeOut' }}
-          /&gt;
-        );
-      })}
+      {segmentsWithOffsets.<span class="fstat-no" title="function not covered" >map((s</span>eg, i) =&gt; (
+<span class="cstat-no" title="statement not covered" >        &lt;motion.circle</span>
+          key={i}
+          cx={cx} cy={cy} r={r}
+          fill="none"
+          stroke={seg.color}
+          strokeWidth={size * 0.1}
+          strokeDasharray={`${seg.dashLen} ${circumference - seg.dashLen}`}
+          strokeDashoffset={0}
+          strokeLinecap="round"
+          initial={{ strokeDashoffset: circumference }}
+          animate={{ strokeDashoffset: -seg.offset - circumference }}
+          transition={{ duration: 0.8, delay: i * 0.1, ease: 'easeOut' }}
+        /&gt;
+      ))}
     &lt;/svg&gt;
   );
 };
@@ -1710,7 +1707,7 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
                 ))}
               &lt;/div&gt;
             &lt;/div&gt;
-            &lt;BarChart data={chartData} dataKey={chartView} height={200} <span class="fstat-no" title="function not covered" >format={(v</span>) =&gt; <span class="cstat-no" title="statement not covered" >chartView === 'revenue' ? `$${v.toLocaleString()}` : v.toLocaleString()} /&gt;</span>
+            &lt;BarChart data={chartData} dataKey={chartView} height={200} <span class="fstat-no" title="function not covered" >format={(v</span>) =&gt; <span class="cstat-no" title="statement not covered" >chartView === 'revenue' ? formatMAD(v) : v.toLocaleString()} /&gt;</span>
           &lt;/motion.div&gt;
 &nbsp;
           &lt;motion.div
@@ -1981,7 +1978,7 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
 <span class="cstat-no" title="statement not covered" >                  &lt;tr key={m.month} className="border-b border-elevated last:border-0 hover:bg-elevated/50 transition-colors"&gt;</span>
                     &lt;td className="py-3 pr-4 font-medium text-contrast-primary"&gt;{m.month}&lt;/td&gt;
                     &lt;td className="py-3 px-4 text-right text-contrast-primary font-mono text-[11px]"&gt;
-                      ${(m.revenue ?? 0).toLocaleString()}
+                      {formatMAD(m.revenue ?? 0)}
                     &lt;/td&gt;
                     &lt;td className="py-3 px-4 text-right text-contrast-primary font-mono text-[11px]"&gt;
                       {(m.orders ?? 0).toLocaleString()}
@@ -1990,7 +1987,7 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
                       {(m.users ?? 0).toLocaleString()}
                     &lt;/td&gt;
                     &lt;td className="py-3 pl-4 text-right text-contrast-primary font-mono text-[11px]"&gt;
-                      ${((m.revenue ?? 0) / (m.orders ?? 1)).toFixed(2)}
+                      {formatMAD(((m.revenue ?? 0) / (m.orders ?? 1)))}
                     &lt;/td&gt;
                   &lt;/tr&gt;
                 ))}
@@ -2011,7 +2008,7 @@ export default PlatformAnalytics;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-06-09T14:48:31.203Z
+                at 2026-06-12T04:41:11.399Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

@@ -7,7 +7,6 @@ import { z } from 'zod';
 import toast from 'react-hot-toast';
 import { Mail, Lock, Eye, EyeOff, ArrowRight, User, Stethoscope, Truck, XCircle } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
-import { demoCredentials } from '../../mock/mockData';
 import { getFieldErrors } from '../../utils/apiErrorHandler';
 
 const loginSchema = z.object({
@@ -20,19 +19,16 @@ const roles = [
     id: 'patient',
     label: 'Patient',
     icon: User,
-    demo: demoCredentials.patient,
   },
   {
     id: 'pharmacien',
     label: 'Pharmacien',
     icon: Stethoscope,
-    demo: demoCredentials.pharmacien,
   },
   {
     id: 'distributeur',
     label: 'Distributeur',
     icon: Truck,
-    demo: demoCredentials.distributeur,
   },
 ];
 

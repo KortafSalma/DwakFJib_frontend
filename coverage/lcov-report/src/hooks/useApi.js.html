@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/63</span>
+                <span class='fraction'>0/67</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/38</span>
+                <span class='fraction'>0/42</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/57</span>
+                <span class='fraction'>0/61</span>
             </div>
         
             
@@ -172,7 +172,12 @@
 <a name='L107'></a><a href='#L107'>107</a>
 <a name='L108'></a><a href='#L108'>108</a>
 <a name='L109'></a><a href='#L109'>109</a>
-<a name='L110'></a><a href='#L110'>110</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -193,18 +198,23 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -302,6 +312,8 @@ export const <span class="cstat-no" title="statement not covered" ><span class="
 <span class="cstat-no" title="statement not covered" >    if (abortRef.current) {</span>
 <span class="cstat-no" title="statement not covered" >      abortRef.current.abort();</span>
     }
+    const controller = <span class="cstat-no" title="statement not covered" >new AbortController();</span>
+<span class="cstat-no" title="statement not covered" >    abortRef.current = controller;</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    if (showLoading) <span class="cstat-no" title="statement not covered" >setLoading(true);</span></span>
 <span class="cstat-no" title="statement not covered" >    setError(null);</span>
@@ -316,6 +328,9 @@ export const <span class="cstat-no" title="statement not covered" ><span class="
 &nbsp;
 <span class="cstat-no" title="statement not covered" >      return result;</span>
     } catch (err) {
+<span class="cstat-no" title="statement not covered" >      if (err?.name === 'CanceledError' || err?.code === 'ERR_CANCELED') {</span>
+<span class="cstat-no" title="statement not covered" >        throw err;</span>
+      }
       const message = <span class="cstat-no" title="statement not covered" >err?.message || errorMessage || 'Something went wrong';</span>
 <span class="cstat-no" title="statement not covered" >      setError(message);</span>
 &nbsp;
@@ -367,12 +382,12 @@ export const <span class="cstat-no" title="statement not covered" ><span class="
 &nbsp;
 export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >useApiQuery = (a</span>piCall, options = <span class="branch-0 cbranch-no" title="branch not covered" >{}) =&gt; {</span></span>
   const { loading, error, data, execute, reset } = <span class="cstat-no" title="statement not covered" >useApi();</span>
-  const { autoFetch = <span class="branch-0 cbranch-no" title="branch not covered" >true, .</span>..queryOptions } = <span class="cstat-no" title="statement not covered" >options;</span>
+  const { autoFetch = <span class="branch-0 cbranch-no" title="branch not covered" >true } = <span class="cstat-no" title="statement not covered" >o</span>ptions;</span>
   const <span class="cstat-no" title="statement not covered" >hasFetched = useRef(false);</span>
 &nbsp;
   const <span class="cstat-no" title="statement not covered" >fetch = useCallback(<span class="fstat-no" title="function not covered" >async () =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >    return execute(apiCall, queryOptions);</span>
-  }, [apiCall, execute, queryOptions]);
+<span class="cstat-no" title="statement not covered" >    return execute(apiCall);</span>
+  }, [apiCall, execute]);
 &nbsp;
 <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  useEffect(() =&gt; {</span></span>
 <span class="cstat-no" title="statement not covered" >    if (autoFetch &amp;&amp; !hasFetched.current) {</span>
@@ -397,7 +412,7 @@ export default useApi;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-06-09T14:48:31.203Z
+                at 2026-06-12T04:41:11.399Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

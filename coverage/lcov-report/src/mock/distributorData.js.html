@@ -118,7 +118,9 @@
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -149,6 +151,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -174,33 +178,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const mockShipments = <span class="cstat-no" title="statement not covered" >[</span>
-  { id: 'SHP-001', pharmacy: 'HealthPlus Pharmacy', origin: 'Central Warehouse', destination: 'Downtown Branch', status: 'IN_TRANSIT', items: 45, weight: '120kg', driver: 'John Smith', estimatedDelivery: '2026-05-21', progress: 65 },
-  { id: 'SHP-002', pharmacy: 'MediCare Center', origin: 'North Depot', destination: 'Suburban Clinic', status: 'SHIPPED', items: 32, weight: '85kg', driver: 'Sarah Lee', estimatedDelivery: '2026-05-22', progress: 30 },
-  { id: 'SHP-003', pharmacy: 'GreenCross Pharmacy', origin: 'Central Warehouse', destination: 'Eastside Store', status: 'DELIVERED', items: 28, weight: '75kg', driver: 'Mike Chen', estimatedDelivery: '2026-05-20', progress: 100 },
-  { id: 'SHP-004', pharmacy: 'Wellness Hub', origin: 'South Depot', destination: 'Mall Location', status: 'PROCESSING', items: 56, weight: '150kg', driver: 'Unassigned', estimatedDelivery: '2026-05-23', progress: 10 },
-  { id: 'SHP-005', pharmacy: 'City Pharmacy', origin: 'Central Warehouse', destination: 'Airport Branch', status: 'PENDING', items: 20, weight: '55kg', driver: 'Unassigned', estimatedDelivery: '2026-05-24', progress: 0 },
-  { id: 'SHP-006', pharmacy: 'HealthPlus Pharmacy', origin: 'North Depot', destination: 'Downtown Branch', status: 'IN_TRANSIT', items: 38, weight: '95kg', driver: 'Emily Davis', estimatedDelivery: '2026-05-21', progress: 45 },
-  { id: 'SHP-007', pharmacy: 'MediCare Center', origin: 'Central Warehouse', destination: 'Suburban Clinic', status: 'CANCELLED', items: 15, weight: '40kg', driver: 'N/A', estimatedDelivery: '2026-05-20', progress: 0 },
-  { id: 'SHP-008', pharmacy: 'GreenCross Pharmacy', origin: 'South Depot', destination: 'Eastside Store', status: 'DELIVERED', items: 42, weight: '110kg', driver: 'John Smith', estimatedDelivery: '2026-05-19', progress: 100 },
+  { id: 'LIV-001', pharmacy: 'Pharmacie El Farah', origin: 'Entrepot Central Casa', destination: 'Casablanca Centre', status: 'IN_TRANSIT', items: 45, weight: '120kg', driver: 'Hassan El Omari', estimatedDelivery: '2026-05-21', progress: 65 },
+  { id: 'LIV-002', pharmacy: 'Pharmacie Ibn Sina', origin: 'Depot Nord Rabat', destination: 'Rabat Ville', status: 'SHIPPED', items: 32, weight: '85kg', driver: 'Youssef Ait Ali', estimatedDelivery: '2026-05-22', progress: 30 },
+  { id: 'LIV-003', pharmacy: 'Pharmacie Al Amal', origin: 'Entrepot Central Casa', destination: 'Marrakech Gueliz', status: 'DELIVERED', items: 28, weight: '75kg', driver: 'Rachid El Fassi', estimatedDelivery: '2026-05-20', progress: 100 },
+  { id: 'LIV-004', pharmacy: 'Pharmacie Ennakhil', origin: 'Depot Sud Agadir', destination: 'Agadir Centre', status: 'PROCESSING', items: 56, weight: '150kg', driver: 'Non assigne', estimatedDelivery: '2026-05-23', progress: 10 },
+  { id: 'LIV-005', pharmacy: 'Pharmacie Atlas', origin: 'Entrepot Central Casa', destination: 'Fes Ville Nouvelle', status: 'PENDING', items: 20, weight: '55kg', driver: 'Non assigne', estimatedDelivery: '2026-05-24', progress: 0 },
+  { id: 'LIV-006', pharmacy: 'Pharmacie Al Karama', origin: 'Depot Nord Tanger', destination: 'Tanger Centre', status: 'IN_TRANSIT', items: 38, weight: '95kg', driver: 'Mohamed Bennis', estimatedDelivery: '2026-05-21', progress: 45 },
+  { id: 'LIV-007', pharmacy: 'Pharmacie Ibn Sina', origin: 'Entrepot Central Casa', destination: 'Rabat Agdal', status: 'CANCELLED', items: 15, weight: '40kg', driver: 'N/A', estimatedDelivery: '2026-05-20', progress: 0 },
+  { id: 'LIV-008', pharmacy: 'Pharmacie El Farah', origin: 'Depot Sud', destination: 'Casablanca Maârif', status: 'DELIVERED', items: 42, weight: '110kg', driver: 'Hassan El Omari', estimatedDelivery: '2026-05-19', progress: 100 },
 ];
 &nbsp;
 export const mockOrders = <span class="cstat-no" title="statement not covered" >[</span>
-  { id: 'ORD-D-001', pharmacy: 'HealthPlus Pharmacy', items: 12, total: 2450.00, status: 'PENDING', date: '2026-05-20', priority: 'high' },
-  { id: 'ORD-D-002', pharmacy: 'MediCare Center', items: 8, total: 1890.50, status: 'PENDING', date: '2026-05-20', priority: 'medium' },
-  { id: 'ORD-D-003', pharmacy: 'GreenCross Pharmacy', items: 15, total: 3200.75, status: 'PROCESSING', date: '2026-05-19', priority: 'high' },
-  { id: 'ORD-D-004', pharmacy: 'Wellness Hub', items: 6, total: 980.00, status: 'PROCESSING', date: '2026-05-19', priority: 'low' },
-  { id: 'ORD-D-005', pharmacy: 'City Pharmacy', items: 20, total: 4150.25, status: 'SHIPPED', date: '2026-05-18', priority: 'high' },
-  { id: 'ORD-D-006', pharmacy: 'HealthPlus Pharmacy', items: 10, total: 1750.00, status: 'DELIVERED', date: '2026-05-17', priority: 'medium' },
-  { id: 'ORD-D-007', pharmacy: 'MediCare Center', items: 5, total: 890.00, status: 'DELIVERED', date: '2026-05-16', priority: 'low' },
-  { id: 'ORD-D-008', pharmacy: 'GreenCross Pharmacy', items: 18, total: 3680.50, status: 'CANCELLED', date: '2026-05-15', priority: 'medium' },
+  { id: 'CMD-001', pharmacy: 'Pharmacie El Farah', items: 12, total: 2450.00, status: 'PENDING', date: '2026-05-20', priority: 'high' },
+  { id: 'CMD-002', pharmacy: 'Pharmacie Ibn Sina', items: 8, total: 1890.50, status: 'PENDING', date: '2026-05-20', priority: 'medium' },
+  { id: 'CMD-003', pharmacy: 'Pharmacie Al Amal', items: 15, total: 3200.75, status: 'PROCESSING', date: '2026-05-19', priority: 'high' },
+  { id: 'CMD-004', pharmacy: 'Pharmacie Ennakhil', items: 6, total: 980.00, status: 'PROCESSING', date: '2026-05-19', priority: 'low' },
+  { id: 'CMD-005', pharmacy: 'Pharmacie Atlas', items: 20, total: 4150.25, status: 'SHIPPED', date: '2026-05-18', priority: 'high' },
+  { id: 'CMD-006', pharmacy: 'Pharmacie El Farah', items: 10, total: 1750.00, status: 'DELIVERED', date: '2026-05-17', priority: 'medium' },
+  { id: 'CMD-007', pharmacy: 'Pharmacie Ibn Sina', items: 5, total: 890.00, status: 'DELIVERED', date: '2026-05-16', priority: 'low' },
+  { id: 'CMD-008', pharmacy: 'Pharmacie Al Karama', items: 18, total: 3680.50, status: 'CANCELLED', date: '2026-05-15', priority: 'medium' },
 ];
 &nbsp;
 export const mockDrivers = <span class="cstat-no" title="statement not covered" >[</span>
-  { id: 1, name: 'John Smith', status: 'active', currentShipment: 'SHP-001', deliveries: 12, rating: 4.8 },
-  { id: 2, name: 'Sarah Lee', status: 'active', currentShipment: 'SHP-002', deliveries: 8, rating: 4.9 },
-  { id: 3, name: 'Mike Chen', status: 'idle', currentShipment: null, deliveries: 15, rating: 4.7 },
-  { id: 4, name: 'Emily Davis', status: 'active', currentShipment: 'SHP-006', deliveries: 10, rating: 4.6 },
-  { id: 5, name: 'Robert Wilson', status: 'offline', currentShipment: null, deliveries: 7, rating: 4.5 },
+  { id: 1, name: 'Hassan El Omari', status: 'active', currentShipment: 'LIV-001', deliveries: 12, rating: 4.9 },
+  { id: 2, name: 'Youssef Ait Ali', status: 'active', currentShipment: 'LIV-002', deliveries: 8, rating: 4.8 },
+  { id: 3, name: 'Rachid El Fassi', status: 'idle', currentShipment: null, deliveries: 15, rating: 4.7 },
+  { id: 4, name: 'Mohamed Bennis', status: 'active', currentShipment: 'LIV-006', deliveries: 10, rating: 4.6 },
+  { id: 5, name: 'Hicham Ouazzani', status: 'offline', currentShipment: null, deliveries: 7, rating: 4.5 },
 ];
 &nbsp;
 export const mockDeliveryStats = <span class="cstat-no" title="statement not covered" >{</span>
@@ -210,23 +214,25 @@ export const mockDeliveryStats = <span class="cstat-no" title="statement not cov
   delayed: 8,
   onTimeRate: 94.5,
   avgDeliveryTime: '2.4h',
+  cities: 12,
+  activeDrivers: 18,
 };
 &nbsp;
 export const mockRevenueData = <span class="cstat-no" title="statement not covered" >[</span>
-  { label: 'Jan', value: 18500 },
-  { label: 'Feb', value: 21200 },
-  { label: 'Mar', value: 19800 },
-  { label: 'Apr', value: 24500 },
-  { label: 'May', value: 28200 },
-  { label: 'Jun', value: 26800 },
+  { label: 'Janv', value: 18500 },
+  { label: 'Fev', value: 21200 },
+  { label: 'Mars', value: 19800 },
+  { label: 'Avr', value: 24500 },
+  { label: 'Mai', value: 28200 },
+  { label: 'Juin', value: 26800 },
 ];
 &nbsp;
 export const mockRoutes = <span class="cstat-no" title="statement not covered" >[</span>
-  { id: 'R-001', name: 'Central → Downtown', stops: 4, distance: '12.5km', estimatedTime: '45min', status: 'active', driver: 'John Smith' },
-  { id: 'R-002', name: 'North → Suburban', stops: 3, distance: '18.2km', estimatedTime: '1h 10min', status: 'active', driver: 'Sarah Lee' },
-  { id: 'R-003', name: 'South → Mall', stops: 5, distance: '22.8km', estimatedTime: '1h 30min', status: 'planned', driver: 'Unassigned' },
-  { id: 'R-004', name: 'Central → Airport', stops: 2, distance: '35.0km', estimatedTime: '55min', status: 'planned', driver: 'Unassigned' },
-  { id: 'R-005', name: 'East → West Loop', stops: 6, distance: '28.5km', estimatedTime: '2h', status: 'completed', driver: 'Mike Chen' },
+  { id: 'R-001', name: 'Casablanca Centre → Maârif', stops: 4, distance: '12.5km', estimatedTime: '45min', status: 'active', driver: 'Hassan El Omari' },
+  { id: 'R-002', name: 'Rabat Agdal → Hay Riad', stops: 3, distance: '18.2km', estimatedTime: '1h 10min', status: 'active', driver: 'Youssef Ait Ali' },
+  { id: 'R-003', name: 'Marrakech Gueliz → Massira', stops: 5, distance: '22.8km', estimatedTime: '1h 30min', status: 'planned', driver: 'Non assigne' },
+  { id: 'R-004', name: 'Tanger Centre → Gare TGV', stops: 2, distance: '35.0km', estimatedTime: '55min', status: 'planned', driver: 'Non assigne' },
+  { id: 'R-005', name: 'Fes Ville Nouvelle → Atlas', stops: 6, distance: '28.5km', estimatedTime: '2h', status: 'completed', driver: 'Rachid El Fassi' },
 ];
 &nbsp;</pre></td></tr></table></pre>
 
@@ -235,7 +241,7 @@ export const mockRoutes = <span class="cstat-no" title="statement not covered" >
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-06-09T14:48:31.203Z
+                at 2026-06-12T04:41:11.399Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

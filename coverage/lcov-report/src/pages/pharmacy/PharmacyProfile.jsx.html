@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/90</span>
+                <span class='fraction'>0/79</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/86</span>
+                <span class='fraction'>0/75</span>
             </div>
         
             
@@ -557,18 +557,7 @@
 <a name='L492'></a><a href='#L492'>492</a>
 <a name='L493'></a><a href='#L493'>493</a>
 <a name='L494'></a><a href='#L494'>494</a>
-<a name='L495'></a><a href='#L495'>495</a>
-<a name='L496'></a><a href='#L496'>496</a>
-<a name='L497'></a><a href='#L497'>497</a>
-<a name='L498'></a><a href='#L498'>498</a>
-<a name='L499'></a><a href='#L499'>499</a>
-<a name='L500'></a><a href='#L500'>500</a>
-<a name='L501'></a><a href='#L501'>501</a>
-<a name='L502'></a><a href='#L502'>502</a>
-<a name='L503'></a><a href='#L503'>503</a>
-<a name='L504'></a><a href='#L504'>504</a>
-<a name='L505'></a><a href='#L505'>505</a>
-<a name='L506'></a><a href='#L506'>506</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L495'></a><a href='#L495'>495</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -664,16 +653,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -694,7 +677,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -709,12 +691,8 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1079,7 +1057,7 @@ import {
   User, Store, Shield, Bell, SlidersHorizontal, Mail, Phone,
   Camera, Save, X, Key, MapPin, Clock, Upload,
   ChevronDown, AlertTriangle, Trash2, LogOut,
-  Check, Image, Eye, Activity, Heart,
+  Check, Image,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { userService, pharmacyService } from '../../api/pharmacy';
@@ -1167,11 +1145,8 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
   const [mobileOpen, <span class="cstat-no" title="statement not covered" >setMobileOpen] = useState(null);</span>
   const [hasChanges, <span class="cstat-no" title="statement not covered" >setHasChanges] = useState(false);</span>
 &nbsp;
-  const [pharmacistPhoto, <span class="cstat-no" title="statement not covered" >setPharmacistPhoto] = useState(null);</span>
   const [pharmacistPreview, <span class="cstat-no" title="statement not covered" >setPharmacistPreview] = useState(user?.photo || null);</span>
-  const [pharmacyLogo, <span class="cstat-no" title="statement not covered" >setPharmacyLogo] = useState(null);</span>
   const [logoPreview, <span class="cstat-no" title="statement not covered" >setLogoPreview] = useState(null);</span>
-  const [uploading, <span class="cstat-no" title="statement not covered" >setUploading] = useState(false);</span>
 &nbsp;
   const <span class="cstat-no" title="statement not covered" >pharmacistRef = useRef(null);</span>
   const <span class="cstat-no" title="statement not covered" >logoRef = useRef(null);</span>
@@ -1179,22 +1154,18 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
   const handlePharmacistPhoto = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async (e</span>) =&gt; {</span>
     const file = <span class="cstat-no" title="statement not covered" >e.target.files[0];</span>
 <span class="cstat-no" title="statement not covered" >    if (!file) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >    setPharmacistPhoto(file);</span>
     const reader = <span class="cstat-no" title="statement not covered" >new FileReader();</span>
 <span class="cstat-no" title="statement not covered" >    reader.<span class="fstat-no" title="function not covered" >onload = (e</span>v) =&gt; <span class="cstat-no" title="statement not covered" >setPharmacistPreview(ev.target.result);</span></span>
 <span class="cstat-no" title="statement not covered" >    reader.readAsDataURL(file);</span>
-<span class="cstat-no" title="statement not covered" >    setUploading(true);</span>
 <span class="cstat-no" title="statement not covered" >    try {</span>
       const formData = <span class="cstat-no" title="statement not covered" >new FormData();</span>
 <span class="cstat-no" title="statement not covered" >      formData.append('photo', file);</span>
 <span class="cstat-no" title="statement not covered" >      await userService.updatePhoto(formData);</span>
 <span class="cstat-no" title="statement not covered" >      toast.success('Profile photo updated!');</span>
     } catch { <span class="cstat-no" title="statement not covered" >toast.error('Failed to update photo'); }</span>
-    finally { <span class="cstat-no" title="statement not covered" >setUploading(false); }</span>
   };
 &nbsp;
   const removePharmacistPhoto = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async () =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >    setPharmacistPhoto(null);</span>
 <span class="cstat-no" title="statement not covered" >    setPharmacistPreview(null);</span>
 <span class="cstat-no" title="statement not covered" >    try {</span>
 <span class="cstat-no" title="statement not covered" >      await userService.deletePhoto();</span>
@@ -1205,22 +1176,18 @@ const <span class="cstat-no" title="statement not covered" ><span class="fstat-n
   const handlePharmacyLogo = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async (e</span>) =&gt; {</span>
     const file = <span class="cstat-no" title="statement not covered" >e.target.files[0];</span>
 <span class="cstat-no" title="statement not covered" >    if (!file) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >    setPharmacyLogo(file);</span>
     const reader = <span class="cstat-no" title="statement not covered" >new FileReader();</span>
 <span class="cstat-no" title="statement not covered" >    reader.<span class="fstat-no" title="function not covered" >onload = (e</span>v) =&gt; <span class="cstat-no" title="statement not covered" >setLogoPreview(ev.target.result);</span></span>
 <span class="cstat-no" title="statement not covered" >    reader.readAsDataURL(file);</span>
-<span class="cstat-no" title="statement not covered" >    setUploading(true);</span>
 <span class="cstat-no" title="statement not covered" >    try {</span>
       const formData = <span class="cstat-no" title="statement not covered" >new FormData();</span>
 <span class="cstat-no" title="statement not covered" >      formData.append('logo', file);</span>
 <span class="cstat-no" title="statement not covered" >      await pharmacyService.updatePharmacy(1, formData);</span>
 <span class="cstat-no" title="statement not covered" >      toast.success('Logo updated!');</span>
     } catch { <span class="cstat-no" title="statement not covered" >toast.error('Failed to update logo'); }</span>
-    finally { <span class="cstat-no" title="statement not covered" >setUploading(false); }</span>
   };
 &nbsp;
   const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >removePharmacyLogo = () =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >    setPharmacyLogo(null);</span>
 <span class="cstat-no" title="statement not covered" >    setLogoPreview(null);</span>
   };
 &nbsp;
@@ -1585,7 +1552,7 @@ export default PharmacyProfile;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-06-09T14:48:31.203Z
+                at 2026-06-12T04:41:11.399Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

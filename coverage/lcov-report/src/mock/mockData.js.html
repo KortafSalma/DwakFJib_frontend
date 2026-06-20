@@ -244,7 +244,9 @@
 <a name='L179'></a><a href='#L179'>179</a>
 <a name='L180'></a><a href='#L180'>180</a>
 <a name='L181'></a><a href='#L181'>181</a>
-<a name='L182'></a><a href='#L182'>182</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -429,6 +431,7 @@
   patient: { email: 'patient@dwakfjib.ma', password: 'patient123', role: 'USER', name: 'Amine Benali' },
   pharmacien: { email: 'pharmacien@dwakfjib.ma', password: 'pharmacien123', role: 'PHARMACY', name: 'Dr. Fatima Zahra' },
   distributeur: { email: 'distributeur@dwakfjib.ma', password: 'distributeur123', role: 'DISTRIBUTOR', name: 'Karim El Idrissi' },
+  admin: { email: 'admin@dwakfjib.ma', password: 'admin123', role: 'ADMIN', name: 'Admin System' },
 };
 &nbsp;
 export const patientProfile = <span class="cstat-no" title="statement not covered" >{</span>
@@ -499,16 +502,16 @@ export const pharmacienData = <span class="cstat-no" title="statement not covere
     { id: 8, nom: 'Khadija Amrani', visites: 4, totalDepense: '980 DH', dernierAchat: '2026-05-01', fidelite: 'Bronze' },
   ],
   stock: [
-    { id: 1, nom: 'Amoxicilline 500mg', categorie: 'Antibiotiques', stock: 245, seuilAlerte: 30, prix: 12.99, statut: 'OK' },
-    { id: 2, nom: 'Paracétamol 1g', categorie: 'Antalgiques', stock: 520, seuilAlerte: 50, prix: 5.50, statut: 'OK' },
-    { id: 3, nom: 'Lisinopril 10mg', categorie: 'Cardiologie', stock: 15, seuilAlerte: 25, prix: 15.75, statut: 'ALERTE' },
-    { id: 4, nom: 'Ventoline 100µg', categorie: 'Respiratoire', stock: 8, seuilAlerte: 20, prix: 22.00, statut: 'ALERTE' },
-    { id: 5, nom: 'Augmentin 1g', categorie: 'Antibiotiques', stock: 0, seuilAlerte: 15, prix: 28.50, statut: 'RUPTURE' },
-    { id: 6, nom: 'Metformine 850mg', categorie: 'Diabète', stock: 189, seuilAlerte: 40, prix: 8.50, statut: 'OK' },
-    { id: 7, nom: 'Ibuprofène 400mg', categorie: 'Anti-inflammatoires', stock: 320, seuilAlerte: 60, prix: 5.99, statut: 'OK' },
-    { id: 8, nom: 'Oméprazole 20mg', categorie: 'Gastro', stock: 0, seuilAlerte: 20, prix: 9.99, statut: 'RUPTURE' },
-    { id: 9, nom: 'Atorvastatine 20mg', categorie: 'Cardiologie', stock: 156, seuilAlerte: 30, prix: 22.50, statut: 'OK' },
-    { id: 10, nom: 'Doliprane 500mg', categorie: 'Antalgiques', stock: 45, seuilAlerte: 20, prix: 4.25, statut: 'OK' },
+    { id: 1, nom: 'Doliprane 500mg', categorie: 'Antalgiques', stock: 245, seuilAlerte: 30, prix: 25.00, statut: 'OK' },
+    { id: 2, nom: 'Efferalgan 1g', categorie: 'Antalgiques', stock: 520, seuilAlerte: 50, prix: 35.00, statut: 'OK' },
+    { id: 3, nom: 'Mopral 20mg', categorie: 'Gastro', stock: 15, seuilAlerte: 25, prix: 55.00, statut: 'ALERTE' },
+    { id: 4, nom: 'Ventoline 100µg', categorie: 'Respiratoire', stock: 8, seuilAlerte: 20, prix: 45.00, statut: 'ALERTE' },
+    { id: 5, nom: 'Augmentin 1g', categorie: 'Antibiotiques', stock: 0, seuilAlerte: 15, prix: 65.00, statut: 'RUPTURE' },
+    { id: 6, nom: 'Glucophage 850mg', categorie: 'Diabète', stock: 189, seuilAlerte: 40, prix: 40.00, statut: 'OK' },
+    { id: 7, nom: 'Advil 400mg', categorie: 'Anti-inflammatoires', stock: 320, seuilAlerte: 60, prix: 32.00, statut: 'OK' },
+    { id: 8, nom: 'Spasfon 80mg', categorie: 'Antispasmodiques', stock: 0, seuilAlerte: 20, prix: 18.00, statut: 'RUPTURE' },
+    { id: 9, nom: 'Daflon 500mg', categorie: 'Veinotoniques', stock: 156, seuilAlerte: 30, prix: 48.00, statut: 'OK' },
+    { id: 10, nom: 'Clamoxyl 500mg', categorie: 'Antibiotiques', stock: 45, seuilAlerte: 20, prix: 42.00, statut: 'OK' },
   ],
   ventesHebdo: [
     { jour: 'Lun', ventes: 2850, objectif: 2500 },
@@ -528,8 +531,8 @@ export const pharmacienData = <span class="cstat-no" title="statement not covere
   ],
   iaAlertes: [
     { id: 'IA-01', type: 'PREDICTION', message: 'Rupture prévue : Augmentin 1g dans 3 jours', priorite: 'HAUTE', date: '2026-05-20' },
-    { id: 'IA-02', type: 'INTERACTION', message: 'Interaction détectée : Lisinopril + Ibuprofène chez patient #12', priorite: 'CRITIQUE', date: '2026-05-20' },
-    { id: 'IA-03', type: 'DEMANDE', message: 'Tendance haussière : Antihistaminiques (+35% vs mois dernier)', priorite: 'MOYENNE', date: '2026-05-19' },
+    { id: 'IA-02', type: 'INTERACTION', message: 'Interaction détectée : Mopral + Aspirine chez patient #12', priorite: 'CRITIQUE', date: '2026-05-20' },
+    { id: 'IA-03', type: 'DEMANDE', message: 'Tendance haussière : Zyrtecset 10mg (+35% vs mois dernier)', priorite: 'MOYENNE', date: '2026-05-19' },
     { id: 'IA-04', type: 'FIDELITE', message: 'Patient Amine Benali éligible bonus fidélité Platine', priorite: 'BASSE', date: '2026-05-18' },
   ],
 };
@@ -588,22 +591,22 @@ export const distributeurData = <span class="cstat-no" title="statement not cove
     { mois: 'Juin', valeur: 26800 },
   ],
   produitsDemande: [
-    { nom: 'Paracétamol 1g', commandes: 342, tendance: 'hausse' },
-    { nom: 'Amoxicilline 500mg', commandes: 298, tendance: 'hausse' },
-    { nom: 'Vitamine D3 1000UI', commandes: 275, tendance: 'hausse' },
-    { nom: 'Metformine 850mg', commandes: 245, tendance: 'hausse' },
-    { nom: 'Atorvastatine 20mg', commandes: 189, tendance: 'baisse' },
-    { nom: 'Lisinopril 10mg', commandes: 156, tendance: 'baisse' },
+    { nom: 'Doliprane 500mg', commandes: 342, tendance: 'hausse' },
+    { nom: 'Augmentin 1g', commandes: 298, tendance: 'hausse' },
+    { nom: 'Spasfon 80mg', commandes: 275, tendance: 'hausse' },
+    { nom: 'Glucophage 850mg', commandes: 245, tendance: 'hausse' },
+    { nom: 'Daflon 500mg', commandes: 189, tendance: 'baisse' },
+    { nom: 'Mopral 20mg', commandes: 156, tendance: 'baisse' },
   ],
 };
 &nbsp;
 export const interactionsMedicamenteuses = <span class="cstat-no" title="statement not covered" >[</span>
-  { medicament1: 'Lisinopril 10mg', medicament2: 'Ibuprofène 400mg', gravite: 'ÉLEVÉE', effet: 'Réduction de l\'effet antihypertenseur, risque d\'insuffisance rénale', recommandation: 'Surveiller la tension artérielle et la fonction rénale' },
-  { medicament1: 'Warfarine 5mg', medicament2: 'Amoxicilline 500mg', gravite: 'MODÉRÉE', effet: 'Augmentation du risque hémorragique', recommandation: 'Surveiller INR, ajuster dose si nécessaire' },
-  { medicament1: 'Metformine 850mg', medicament2: 'Ibuprofène 400mg', gravite: 'MODÉRÉE', effet: 'Risque d\'acidose lactique accru', recommandation: 'Surveiller la fonction rénale' },
-  { medicament1: 'Atorvastatine 20mg', medicament2: 'Antifongiques azolés', gravite: 'ÉLEVÉE', effet: 'Augmentation du risque de myopathie/rhabdomyolyse', recommandation: 'Éviter l\'association ou réduire dose statine' },
+  { medicament1: 'Lopril 20mg', medicament2: 'Advil 400mg', gravite: 'ÉLEVÉE', effet: 'Réduction de l\'effet antihypertenseur, risque d\'insuffisance rénale', recommandation: 'Surveiller la tension artérielle et la fonction rénale' },
+  { medicament1: 'Aspirine 500mg', medicament2: 'Augmentin 1g', gravite: 'MODÉRÉE', effet: 'Augmentation du risque hémorragique', recommandation: 'Surveiller INR, ajuster dose si nécessaire' },
+  { medicament1: 'Glucophage 850mg', medicament2: 'Advil 400mg', gravite: 'MODÉRÉE', effet: 'Risque d\'acidose lactique accru', recommandation: 'Surveiller la fonction rénale' },
+  { medicament1: 'Daflon 500mg', medicament2: 'Antifongiques azolés', gravite: 'ÉLEVÉE', effet: 'Augmentation du risque de myopathie/rhabdomyolyse', recommandation: 'Éviter l\'association ou réduire dose statine' },
   { medicament1: 'Ventoline 100µg', medicament2: 'Bêta-bloquants', gravite: 'MOYENNE', effet: 'Diminution de l\'efficacité bronchodilatatrice', recommandation: 'Utiliser un bêta-2 agoniste avec prudence' },
-  { medicament1: 'Oméprazole 20mg', medicament2: 'Clopidogrel 75mg', gravite: 'MODÉRÉE', effet: 'Réduction de l\'activation du clopidogrel', recommandation: 'Utiliser un IPP sans interaction (pantoprazole)' },
+  { medicament1: 'Mopral 20mg', medicament2: 'Plavix 75mg', gravite: 'MODÉRÉE', effet: 'Réduction de l\'activation du clopidogrel', recommandation: 'Utiliser un IPP sans interaction (pantoprazole)' },
   { medicament1: 'Augmentin 1g', medicament2: 'Méthotrexate', gravite: 'ÉLEVÉE', effet: 'Augmentation de la toxicité du méthotrexate', recommandation: 'Éviter l\'association, surveiller les taux' },
 ];
 &nbsp;</pre></td></tr></table></pre>
@@ -613,7 +616,7 @@ export const interactionsMedicamenteuses = <span class="cstat-no" title="stateme
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-06-09T14:48:31.203Z
+                at 2026-06-12T04:41:11.399Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

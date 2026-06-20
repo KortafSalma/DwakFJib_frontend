@@ -118,17 +118,35 @@ export const mockHandler = async (config) => {
   // Auth
   if (url === '/login' && method === 'post') {
     const cred = Object.values(demoCredentials).find((c) => c.email === body.email && c.password === body.password);
-    if (!cred) return respond({ message: 'Identifiants incorrects' }, 401);
-    return respond({
-      token: `mock_${btoa(cred.email)}_${Date.now()}`,
-      user: { id: `usr_${cred.role.toLowerCase()}`, name: cred.name, email: cred.email, role: cred.role },
-    });
+    if (cred) {
+      return respond({
+        token: `mock_${btoa(cred.email)}_${Date.now()}`,
+        user: { id: `usr_${cred.role.toLowerCase()}`, name: cred.name, email: cred.email, role: cred.role },
+      });
+    }
+    const existingUser = users.find((u) => u.email === body.email);
+    if (existingUser) {
+      return respond({
+        token: `mock_${btoa(existingUser.email)}_${Date.now()}`,
+        user: { id: `usr_${existingUser.id}`, name: existingUser.name, email: existingUser.email, role: existingUser.role },
+      });
+    }
+    return respond({ message: 'Identifiants incorrects' }, 401);
   }
 
   if (url === '/register' && method === 'post') {
+    const newUser = {
+      id: users.length + 1,
+      name: body.name || body.email.split('@')[0],
+      email: body.email,
+      role: body.role || 'USER',
+      statut: 'actif',
+      date: new Date().toISOString().split('T')[0],
+    };
+    users.push(newUser);
     return respond({
-      token: `mock_token_${Date.now()}`,
-      user: { id: 'usr_new', name: body.name || 'New User', email: body.email, role: body.role || 'USER' },
+      token: `mock_${btoa(newUser.email)}_${Date.now()}`,
+      user: { id: `usr_${newUser.id}`, name: newUser.name, email: newUser.email, role: newUser.role },
     });
   }
 
@@ -140,11 +158,28 @@ export const mockHandler = async (config) => {
     const token = config.headers?.Authorization?.replace('Bearer ', '') || '';
     const email = token ? atob(token.replace('mock_', '').split('_')[0]) : '';
     const cred = Object.values(demoCredentials).find((c) => c.email === email);
+    if (cred) {
+      return respond({
+        id: `usr_${cred.role.toLowerCase()}`,
+        name: cred.name,
+        email: cred.email,
+        role: cred.role,
+      });
+    }
+    const existingUser = users.find((u) => u.email === email);
+    if (existingUser) {
+      return respond({
+        id: `usr_${existingUser.id}`,
+        name: existingUser.name,
+        email: existingUser.email,
+        role: existingUser.role,
+      });
+    }
     return respond({
-      id: `usr_${(cred?.role || 'USER').toLowerCase()}`,
-      name: cred?.name || 'User',
-      email: cred?.email || email,
-      role: cred?.role || 'USER',
+      id: `usr_${email.split('@')[0]}`,
+      name: email.split('@')[0],
+      email: email,
+      role: 'USER',
     });
   }
 
