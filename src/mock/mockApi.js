@@ -108,6 +108,18 @@ const respondPaginated = (data, page = 1, perPage = 10) => ({
   headers: { 'content-type': 'application/json' },
 });
 
+const getCurrentEmail = (config) => {
+  const token = config.headers?.Authorization?.replace('Bearer ', '') || '';
+  try {
+    return token ? atob(token.replace('mock_', '').split('_')[0]) : '';
+  } catch {
+    return '';
+  }
+};
+
+const isDemoUser = (email) =>
+  Object.values(demoCredentials).some((c) => c.email === email);
+
 export const mockHandler = async (config) => {
   const url = (config.url || '').replace(/https?:\/\/[^/]+/, '').replace(/^\/api/, '');
   const method = (config.method || 'get').toLowerCase();
@@ -382,6 +394,22 @@ export const mockHandler = async (config) => {
 
   // Pharmacy
   if (url === '/pharmacy/dashboard' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) {
+      return respond({
+        iaAlertes: [],
+        patientsFideles: [],
+        ventesHebdo: [],
+        stats: {
+          reservations_aujourdhui: 0,
+          commandes_encours: 0,
+          stock_total: 0,
+          alertes: 0,
+          revenu_mois: '0 DH',
+          patients_servis: 0,
+        },
+      });
+    }
     return respond({
       ...pharmacienData,
       stats: {
@@ -447,6 +475,8 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/pharmacy/reviews' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respondPaginated([]);
     return respondPaginated([
       { id: 1, user: 'Amine Benali', note: 5, commentaire: 'Excellent service !', date: '2026-05-18' },
       { id: 2, user: 'Salma El Ouafi', note: 4, commentaire: 'Bon accueil, un peu d\'attente', date: '2026-05-15' },
@@ -472,10 +502,16 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/pharmacy/alerts' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respond([]);
     return respond(pharmacienData.iaAlertes);
   }
 
   if (url === '/pharmacy/analytics' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) {
+      return respond({ ventes_par_jour: [], top_medicaments: [], revenu_mensuel: '0 DH', evolution: '0%', patients_nouveaux: 0 });
+    }
     return respond({
       ventes_par_jour: pharmacienData.ventesHebdo,
       top_medicaments: [
@@ -490,10 +526,16 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/pharmacy/notifications' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respondPaginated([]);
     return respondPaginated(notificationsList.filter((n) => n.type === 'stock' || n.type === 'reservation'));
   }
 
   if (url === '/pharmacy/settings' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) {
+      return respond({ nom: 'Ma Pharmacie', adresse: '', telephone: '', email: email, horaires: {}, notifications: {}, devise: 'MAD' });
+    }
     return respond({
       nom: 'Pharmacie El Farah',
       adresse: '45 Boulevard Mohammed V, Casablanca',
@@ -506,11 +548,31 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/pharmacy/loyal-patients' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respond([]);
     return respond(pharmacienData.patientsFideles);
   }
 
   // Distributor
   if (url === '/distributor/dashboard' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) {
+      return respond({
+        livraisonsEnAttente: [],
+        livreurs: [],
+        tendanceRevenu: [],
+        topPartenaires: [],
+        kpis: { commandes_total: 0, livraisons_mois: 0, taux_retard: '0%', satisfaction: '0%' },
+        tendanceCommandes: [],
+        produitsDemande: [],
+        stats_rapides: {
+          commandes_aujourdhui: 0,
+          livraisons_encours: 0,
+          livreurs_disponibles: 0,
+          taux_satisfaction: '0%',
+        },
+      });
+    }
     return respond({
       ...distributeurData,
       stats_rapides: {
@@ -543,6 +605,8 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/distributor/deliveries' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respondPaginated([]);
     return respondPaginated(distributeurData.livraisonsEnAttente);
   }
 
@@ -551,10 +615,14 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/distributor/tracking' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respond([]);
     return respond(distributeurData.livraisonsEnAttente);
   }
 
   if (url === '/distributor/routes' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respond({ itineraire_optimise: [], livreurs: [] });
     return respond({
       itineraire_optimise: [
         { etape: 1, pharmacie: 'Pharmacie El Farah', distance: '2.3 km', temps: '8 min' },
@@ -566,6 +634,8 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/distributor/revenue' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respond({ revenu_total: '0 DH', revenu_mois: '0 DH', evolution: '0%', tendance: [], top_clients: [] });
     return respond({
       revenu_total: '285 400 DH',
       revenu_mois: '48 200 DH',
@@ -576,6 +646,8 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/distributor/analytics' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respond({ kpis: {}, tendance_commandes: [], produits_demande: [] });
     return respond({
       kpis: distributeurData.kpis,
       tendance_commandes: distributeurData.tendanceCommandes,
@@ -584,11 +656,24 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/distributor/notifications' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respondPaginated([]);
     return respondPaginated(notificationsList.filter((n) => n.type === 'livraison' || n.type === 'commande'));
   }
 
   // User (Patient)
   if (url === '/user/dashboard' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) {
+      return respond({
+        profile: null,
+        visites: [],
+        renouvellements: [],
+        fidelite: null,
+        reservations_actives: [],
+        notifications_non_lues: 0,
+      });
+    }
     return respond({
       profile: patientProfile,
       visites: patientVisites,
@@ -600,6 +685,10 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/user/profile' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) {
+      return respond({ name: email.split('@')[0], email, role: 'USER', phone: '', avatar: null });
+    }
     return respond(patientProfile);
   }
 
@@ -660,6 +749,8 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/user/favorites' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respond([]);
     return respond([
       { id: 1, pharmacie_id: 1, nom: 'Pharmacie El Farah', adresse: '45 Bd Mohammed V', note: 4.8 },
       { id: 2, pharmacie_id: 4, nom: 'Pharmacie Al Amal', adresse: '3 Rue Ibn Battouta', note: 4.6 },
@@ -679,6 +770,8 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/user/certificates' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respondPaginated([]);
     return respondPaginated([
       { id: 1, nom: 'Ordonnance - Amoxicilline', date: '2026-05-15', medecin: 'Dr. Idrissi', statut: 'valide' },
       { id: 2, nom: 'Analyse sanguine', date: '2026-04-20', medecin: 'Dr. Chafik', statut: 'valide' },
@@ -694,6 +787,8 @@ export const mockHandler = async (config) => {
   }
 
   if (url === '/user/notifications' && method === 'get') {
+    const email = getCurrentEmail(config);
+    if (!isDemoUser(email)) return respondPaginated([]);
     return respondPaginated(notificationsList);
   }
 
